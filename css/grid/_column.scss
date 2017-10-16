@@ -42,14 +42,7 @@
                 box-sizing: border-box;
                 margin-left: $column-gutter-xs/2;
                 margin-right: $column-gutter-xs/2;
-                width: calc((((100%-#{$navigation-size-xs})/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
-
-                // Utilise seulement sur les blocks prenant 100% de l'ecran
-                &.full-size {
-                    margin-left: -$column-gutter-xs/2;
-                    margin-right: -$column-gutter-xs/2;
-                    width: calc((((100%-#{$navigation-size-xs})/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs} + #{$column-gutter-xs}*2);
-                }
+                width: calc(((100%/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
             }
         }
     }
@@ -72,10 +65,10 @@
                 box-sizing: border-box;
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
-                width: calc((((100%-#{$navigation-size-sm})/#{$column-count-sm}) * #{$i}) - #{$column-gutter}); 
+                width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
-                    width: calc((((100%-#{$navigation-size-sm})/#{$column-count-sm}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    width: width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
         }
@@ -88,10 +81,10 @@
                 box-sizing: border-box;
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
-                width: calc((((100%-#{$navigation-size-md})/#{$column-count-md}) * #{$i}) - #{$column-gutter});
+                width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
-                    width: calc((((100%-#{$navigation-size-md})/#{$column-count-md}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
         }
@@ -103,11 +96,11 @@
                 background: purple;
                 box-sizing: border-box;
                 margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2;
-                width: calc((((100%-#{$navigation-size-md})/#{$column-count-lg}) * #{$i}) - #{$column-gutter}); 
+                margin-right: $column-gutter/2; 
+                width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter}); 
 
                 &.full-size {
-                    width: calc((((100%-#{$navigation-size-lg})/#{$column-count-lg}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
         }
@@ -120,10 +113,10 @@
                 box-sizing: border-box;
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
-                width: calc((((100%-#{$navigation-size-xl})/#{$column-count-xl}) * #{$i}) - #{$column-gutter});
+                width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
-                    width: calc((((100%-#{$navigation-size-xl})/#{$column-count-xl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
         }
@@ -136,10 +129,10 @@
                 box-sizing: border-box;
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
-                width: calc((((100%-#{$navigation-size-xxl})/#{$column-count-xxl}) * #{$i}) - #{$column-gutter}); 
+                width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter});
 
                 &.full-size {
-                    width: calc((((100%-#{$navigation-size-xxl})/#{$column-count-xxl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
         }
