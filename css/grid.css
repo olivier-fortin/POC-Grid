@@ -226,10 +226,6 @@ __________           ____ ___
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       min-height: 20px; }
-      .grid-container > .row > [class*="col-"].full-size,
-      .grid-container > * > .row > [class*="col-"].full-size {
-        margin-left: -10px;
-        margin-right: -10px; }
   @media (min-width: 320px) and (max-width: 640px) {
     .grid-container {
       margin-left: 10px;
@@ -301,6 +297,9 @@ __________           ____ ___
       margin-right: 20px; }
       .grid-container > .row,
       .grid-container > * > .row {
+        margin-left: -10px;
+        margin-right: -10px; }
+      .grid-container > [class*="col-"].full-size {
         margin-left: -10px;
         margin-right: -10px; } }
   @media (min-width: 640.01px) and (max-width: 1023px) {
