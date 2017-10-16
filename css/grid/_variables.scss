@@ -1,0 +1,68 @@
+/*
+__________           ____ ___       
+\______   \         |    |   \____  
+ |    |  _/  ______ |    |   /    \ 
+ |    |   \ /_____/ |    |  /   |  \
+ |______  /         |______/|___|  /
+        \/                       \/ 
+*/
+
+// Grid Settings
+$navigation-size:           220px;
+
+// Gutters 
+$column-gutter:             20px;
+$column-gutter-xs:          10px;
+
+// Breakpoints
+    // X-Small
+    $xsmall :                   640px;
+    $max-xsmall :               640px;
+    $min-xsmall :               320px;
+    $column-count-xs:           4;
+    $navigation-size-xs:        240px;
+
+    // Small
+    $small : 1023px;
+    $max-small :                1023px;
+    $min-small :                ($max-xsmall + 0.01);
+    $column-count-sm:           8;
+    $navigation-size-sm:        230px;
+
+    // Medium
+    $medium : 1239px;
+    $max-medium :               1239px;
+    $min-medium :               ($max-small + 0.01);
+    $column-count-md:           12;
+    $navigation-size-md:        300px;
+
+    // Large
+    $large : 1599px;
+    $max-large :                1599px;
+    $min-large :                ($max-medium + 0.01);
+    $column-count-lg:           18;
+    $navigation-size-lg:        220px;
+
+    // XLarge
+    $xlarge : 2339px;
+    $max-xlarge :               2339px;
+    $min-xlarge :               ($max-large + 0.01);
+    $column-count-xl:           22;
+    $navigation-size-xl:        230px;
+
+    // XXLarge
+    //$xxlarge:                 2340px;
+    $max-xxlarge:               3840px;
+    $min-xxlarge:               ($max-xlarge + 0.01);
+    $column-count-xxl:          26;
+    $navigation-size-xxl:       240px;
+
+
+
+
+
+
+
+
+
+

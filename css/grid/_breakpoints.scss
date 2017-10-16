@@ -1,0 +1,97 @@
+// Extra small devices only
+@mixin xs-only {
+    @media (min-width: #{$min-xsmall}) and (max-width: #{$max-xsmall}) {
+        @content;
+    }
+}
+
+// Small devices and up
+@mixin sm {
+    @media (min-width: #{$min-small}) {
+        @content;
+    }
+}
+
+// Small devices only
+@mixin sm-only {
+    @media (min-width: #{$min-small}) and (max-width: #{$max-small}) {
+        @content;
+    }
+}
+
+// Medium devices and up
+@mixin md {
+    @media (min-width: #{$min-medium}) {
+        @content;
+    }
+}
+
+// Medium devices only
+@mixin md-only {
+    @media (min-width: #{$min-medium}) and (max-width: #{$max-medium}) {
+        @content;
+    }
+}
+
+// Large devices and up
+@mixin lg {
+    @media (min-width: #{$min-large}) {
+        @content;
+    }
+}
+
+// Large devices only
+@mixin lg-only {
+    @media (min-width: #{$min-large}) and (max-width: #{$max-large}) {
+        @content;
+    }
+}
+
+// Extra large devices and up
+@mixin xl {
+    @media (min-width: #{$min-xlarge}) {
+        @content;
+    }
+}
+
+// Extra large devices only
+@mixin xl-only {
+    @media (min-width: #{$min-xlarge}) and (max-width: #{$max-xlarge}) {
+        @content;
+    }
+}
+
+// XXLarge devices and up
+@mixin xxl {
+    @media (min-width: #{$min-xxlarge}) {
+        @content;
+    }
+}
+
+// Tablet on portrait mode
+@mixin sm-portrait {
+    @media (min-device-width: #{$min-small}) and (max-device-width: #{$max-small}) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Tablet on landscape mode
+@mixin sm-landscape {
+    @media (min-device-width: #{$min-small}) and (max-device-width: #{$max-small}) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// Phone on portrait mode
+@mixin xs-portrait {
+    @media (min-device-width: #{$min-xsmall}) and (max-device-width: #{$max-xsmall}) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Phone on landscape mode
+@mixin xs-landscape {
+    @media (min-device-width: #{$min-xsmall}) and (max-device-width: #{$max-xsmall}) and (orientation: landscape) {
+        @content;
+    }
+}

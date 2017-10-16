@@ -1,0 +1,107 @@
+@mixin show() {
+    display: flex !important;
+    visibility: visible;
+}
+
+@mixin hide() {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+/* VISIBLE */
+    .show { @include show; }
+    
+    // XSmall
+    @include xs-only {
+        .visible-sm { @include hide; }
+        .visible-md { @include hide; }
+        .visible-lg { @include hide; }
+        .visible-xl { @include hide; }
+        .visible-xxl { @include hide; }
+        .visible-xs { @include show; }
+    }
+
+    // Small
+    @include sm-only {
+        .visible-xs { @include hide; }
+        .visible-md { @include hide; }
+        .visible-lg { @include hide; }
+        .visible-xl { @include hide; }
+        .visible-xxl { @include hide; }
+        .visible-sm { @include show; }
+    }
+
+    // Medium
+    @include md-only {
+        .visible-xs { @include hide; }
+        .visible-sm { @include hide; }
+        .visible-lg { @include hide; }
+        .visible-xl { @include hide; }
+        .visible-xxl { @include hide; }
+        .visible-md { @include show; }
+    }
+
+    // Large
+    @include lg-only {
+        .visible-xs { @include hide; }
+        .visible-sm { @include hide; }
+        .visible-md { @include hide; }
+        .visible-xl { @include hide; }
+        .visible-xxl { @include hide; }
+        .visible-lg { @include show; }
+    }
+
+    // XLarge
+    @include xl-only {
+        .visible-xs { @include hide; }
+        .visible-sm { @include hide; }
+        .visible-md { @include hide; }
+        .visible-lg { @include hide; }
+        .visible-xxl { @include hide; }
+        .visible-xl { @include show; }
+    }
+
+    // XxLarge
+    @include xxl {
+        .visible-xs { @include hide; }
+        .visible-sm { @include hide; }
+        .visible-md { @include hide; }
+        .visible-lg { @include hide; }
+        .visible-xl { @include hide; }
+        .visible-xxl { @include show; }
+    }
+
+
+/* HIDDEN */
+    .hide { @include hide; }
+    
+    // XSmall
+    @include xs-only {
+        .hidden-xs { @include hide; }
+    }
+
+    // Small
+    @include sm-only {
+        .hidden-sm { @include hide; }
+    }
+
+    // Medium
+    @include md-only {
+        .hidden-md { @include hide; }
+    }
+
+    // Large
+    @include lg-only {
+        .hidden-lg { @include hide; }
+    }
+
+    // Extra Large
+    @include xl-only {
+        .hidden-xl { @include hide; }
+    }
+
+    // Extra Extra Large
+    @include xxl {
+        .hidden-xxl { @include hide; }
+    }

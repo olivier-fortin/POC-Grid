@@ -1,0 +1,115 @@
+.grid-container {
+    box-sizing: border-box;
+    margin-left: $column-gutter;
+    margin-right: $column-gutter;
+
+    > .row,
+    > * > .row {
+        align-items: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -$column-gutter/2;
+        margin-right: -$column-gutter/2;
+        
+        > [class*="col-"] { 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: 20px; 
+        }
+    }
+
+    @include xs-only {
+        margin-left: $column-gutter-xs;
+        margin-right: $column-gutter-xs;
+        
+        > .row,
+        > * > .row {
+            flex-direction: column;
+            margin-left: -$column-gutter-xs/2;
+            margin-right: -$column-gutter-xs/2;
+        }
+
+        @for $i from 1 through $column-count-xs {
+            .col-xs-#{$i} {
+                background: aquamarine;
+                box-sizing: border-box;
+                margin-left: $column-gutter-xs/2;
+                margin-right: $column-gutter-xs/2;
+                width: calc((((100%-#{$navigation-size-xs})/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs}); 
+            }
+        }
+    }
+
+    @include sm {
+        margin-left: $column-gutter;
+        margin-right: $column-gutter;
+        
+        > .row,
+        > * > .row {
+            margin-left: -$column-gutter/2;
+            margin-right: -$column-gutter/2;
+        }
+    }
+
+    @include sm-only {
+        @for $i from 1 through $column-count-sm {
+            .col-sm-#{$i} {
+                background: lightsalmon;
+                box-sizing: border-box;
+                margin-left: $column-gutter/2;
+                margin-right: $column-gutter/2;
+                width: calc((((100%-#{$navigation-size-sm})/#{$column-count-sm}) * #{$i}) - #{$column-gutter}); 
+            }
+        }
+    }
+
+    @include md-only {
+        @for $i from 1 through $column-count-md {
+            .col-md-#{$i} {
+                background: lightcoral;
+                box-sizing: border-box;
+                margin-left: $column-gutter/2;
+                margin-right: $column-gutter/2;
+                width: calc((((100%-#{$navigation-size-md})/#{$column-count-md}) * #{$i}) - #{$column-gutter}); 
+            }
+        }
+    }
+
+    @include lg-only {
+        @for $i from 1 through $column-count-lg {
+            .col-lg-#{$i} {
+                background: purple;
+                box-sizing: border-box;
+                margin-left: $column-gutter/2;
+                margin-right: $column-gutter/2;
+                width: calc((((100%-#{$navigation-size-md})/#{$column-count-lg}) * #{$i}) - #{$column-gutter}); 
+            }
+        }
+    }
+
+    @include xl-only {
+        @for $i from 1 through $column-count-xl {
+            .col-xl-#{$i} {
+                background: chartreuse;
+                box-sizing: border-box;
+                margin-left: $column-gutter/2;
+                margin-right: $column-gutter/2;
+                width: calc((((100%-#{$navigation-size-xl})/#{$column-count-xl}) * #{$i}) - #{$column-gutter}); 
+            }
+        }
+    }
+
+    @include xxl {
+        @for $i from 1 through $column-count-xxl {
+            .col-xxl-#{$i} {
+                background: aqua;
+                box-sizing: border-box;
+                margin-left: $column-gutter/2;
+                margin-right: $column-gutter/2;
+                width: calc((((100%-#{$navigation-size-xxl})/#{$column-count-xxl}) * #{$i}) - #{$column-gutter}); 
+            }
+        }
+    }
+}

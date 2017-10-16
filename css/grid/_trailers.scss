@@ -1,0 +1,17 @@
+// Gutter trailer (margin-bottom)
+
+.trailer-column-gutter {
+    margin-bottom: $column-gutter;
+    
+    @include xs-only {
+        margin-bottom: $column-gutter-xs;
+    }
+}
+
+.trailer-column-gutter-half {
+    margin-bottom: $column-gutter/2;
+    
+    @include xs-only {
+        margin-bottom: $column-gutter-xs/2;
+    }
+}
