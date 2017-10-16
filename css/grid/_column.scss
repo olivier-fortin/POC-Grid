@@ -17,11 +17,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             min-height: 20px;
-
-            &.full-size {
-                margin-left: -$column-gutter/2;
-                margin-right: -$column-gutter/2;
-            }
         }
     }
 
@@ -63,6 +58,13 @@
         > * > .row {
             margin-left: -$column-gutter/2;
             margin-right: -$column-gutter/2;
+        }
+        
+        > [class*="col-"] { 
+            &.full-size {
+                margin-left: -$column-gutter/2;
+                margin-right: -$column-gutter/2;
+            }
         }
     }
 
