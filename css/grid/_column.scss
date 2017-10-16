@@ -39,6 +39,9 @@
                 margin-right: $column-gutter-xs/2;
                 width: calc(((100%/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
             }
+            .offset-xs-#{$i} {
+                margin-left: calc(((100%/#{$column-count-xs}) * #{$i}) + #{$column-gutter-xs}/2);
+            }
         }
     }
 
@@ -62,6 +65,9 @@
                 margin-right: $column-gutter/2;
                 width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter});
             }
+            .offset-sm-#{$i} {
+                margin-left: calc(((100%/#{$column-count-sm}) * #{$i}) + #{$column-gutter}/2);
+            }
         }
     }
 
@@ -73,6 +79,9 @@
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
                 width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter});
+            }
+            .offset-md-#{$i} {
+                margin-left: calc(((100%/#{$column-count-md}) * #{$i}) + #{$column-gutter}/2);
             }
         }
     }
@@ -86,6 +95,9 @@
                 margin-right: $column-gutter/2;
                 width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter});
             }
+            .offset-lg-#{$i} {
+                margin-left: calc(((100%/#{$column-count-lg}) * #{$i}) + #{$column-gutter}/2);
+            }
         }
     }
 
@@ -98,6 +110,9 @@
                 margin-right: $column-gutter/2;
                 width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter});
             }
+            .offset-xl-#{$i} {
+                margin-left: calc(((100%/#{$column-count-xl}) * #{$i}) + #{$column-gutter}/2);
+            }
         }
     }
 
@@ -109,6 +124,9 @@
                 margin-left: $column-gutter/2;
                 margin-right: $column-gutter/2;
                 width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter});
+            }
+            .offset-xxl-#{$i} {
+                margin-left: calc(((100%/#{$column-count-xxl}) * #{$i}) + #{$column-gutter}/2);
             }
         }
     }

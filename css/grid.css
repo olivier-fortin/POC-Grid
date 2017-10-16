@@ -246,6 +246,8 @@ __________           ____ ___
         margin-left: 5px;
         margin-right: 5px;
         width: calc(((100%/4) * 1) - 10px); }
+      .grid-container .offset-xs-1 {
+        margin-left: calc(((100%/4) * 1) + 10px/2); }
       .grid-container .col-xs-2 {
         background: aquamarine;
         -webkit-box-sizing: border-box;
@@ -253,6 +255,8 @@ __________           ____ ___
         margin-left: 5px;
         margin-right: 5px;
         width: calc(((100%/4) * 2) - 10px); }
+      .grid-container .offset-xs-2 {
+        margin-left: calc(((100%/4) * 2) + 10px/2); }
       .grid-container .col-xs-3 {
         background: aquamarine;
         -webkit-box-sizing: border-box;
@@ -260,13 +264,17 @@ __________           ____ ___
         margin-left: 5px;
         margin-right: 5px;
         width: calc(((100%/4) * 3) - 10px); }
+      .grid-container .offset-xs-3 {
+        margin-left: calc(((100%/4) * 3) + 10px/2); }
       .grid-container .col-xs-4 {
         background: aquamarine;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         margin-left: 5px;
         margin-right: 5px;
-        width: calc(((100%/4) * 4) - 10px); } }
+        width: calc(((100%/4) * 4) - 10px); }
+      .grid-container .offset-xs-4 {
+        margin-left: calc(((100%/4) * 4) + 10px/2); } }
   @media (min-width: 640.01px) {
     .grid-container {
       margin-left: 20px;
@@ -283,6 +291,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 1) - 20px); }
+    .grid-container .offset-sm-1 {
+      margin-left: calc(((100%/8) * 1) + 20px/2); }
     .grid-container .col-sm-2 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -290,6 +300,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 2) - 20px); }
+    .grid-container .offset-sm-2 {
+      margin-left: calc(((100%/8) * 2) + 20px/2); }
     .grid-container .col-sm-3 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -297,6 +309,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 3) - 20px); }
+    .grid-container .offset-sm-3 {
+      margin-left: calc(((100%/8) * 3) + 20px/2); }
     .grid-container .col-sm-4 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -304,6 +318,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 4) - 20px); }
+    .grid-container .offset-sm-4 {
+      margin-left: calc(((100%/8) * 4) + 20px/2); }
     .grid-container .col-sm-5 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -311,6 +327,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 5) - 20px); }
+    .grid-container .offset-sm-5 {
+      margin-left: calc(((100%/8) * 5) + 20px/2); }
     .grid-container .col-sm-6 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -318,6 +336,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 6) - 20px); }
+    .grid-container .offset-sm-6 {
+      margin-left: calc(((100%/8) * 6) + 20px/2); }
     .grid-container .col-sm-7 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -325,13 +345,17 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/8) * 7) - 20px); }
+    .grid-container .offset-sm-7 {
+      margin-left: calc(((100%/8) * 7) + 20px/2); }
     .grid-container .col-sm-8 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
       margin-right: 10px;
-      width: calc(((100%/8) * 8) - 20px); } }
+      width: calc(((100%/8) * 8) - 20px); }
+    .grid-container .offset-sm-8 {
+      margin-left: calc(((100%/8) * 8) + 20px/2); } }
   @media (min-width: 1023.01px) and (max-width: 1239px) {
     .grid-container .col-md-1 {
       background: lightcoral;
@@ -340,6 +364,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 1) - 20px); }
+    .grid-container .offset-md-1 {
+      margin-left: calc(((100%/12) * 1) + 20px/2); }
     .grid-container .col-md-2 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -347,6 +373,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 2) - 20px); }
+    .grid-container .offset-md-2 {
+      margin-left: calc(((100%/12) * 2) + 20px/2); }
     .grid-container .col-md-3 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -354,6 +382,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 3) - 20px); }
+    .grid-container .offset-md-3 {
+      margin-left: calc(((100%/12) * 3) + 20px/2); }
     .grid-container .col-md-4 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -361,6 +391,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 4) - 20px); }
+    .grid-container .offset-md-4 {
+      margin-left: calc(((100%/12) * 4) + 20px/2); }
     .grid-container .col-md-5 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -368,6 +400,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 5) - 20px); }
+    .grid-container .offset-md-5 {
+      margin-left: calc(((100%/12) * 5) + 20px/2); }
     .grid-container .col-md-6 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -375,6 +409,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 6) - 20px); }
+    .grid-container .offset-md-6 {
+      margin-left: calc(((100%/12) * 6) + 20px/2); }
     .grid-container .col-md-7 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -382,6 +418,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 7) - 20px); }
+    .grid-container .offset-md-7 {
+      margin-left: calc(((100%/12) * 7) + 20px/2); }
     .grid-container .col-md-8 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -389,6 +427,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 8) - 20px); }
+    .grid-container .offset-md-8 {
+      margin-left: calc(((100%/12) * 8) + 20px/2); }
     .grid-container .col-md-9 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -396,6 +436,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 9) - 20px); }
+    .grid-container .offset-md-9 {
+      margin-left: calc(((100%/12) * 9) + 20px/2); }
     .grid-container .col-md-10 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -403,6 +445,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 10) - 20px); }
+    .grid-container .offset-md-10 {
+      margin-left: calc(((100%/12) * 10) + 20px/2); }
     .grid-container .col-md-11 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
@@ -410,13 +454,17 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/12) * 11) - 20px); }
+    .grid-container .offset-md-11 {
+      margin-left: calc(((100%/12) * 11) + 20px/2); }
     .grid-container .col-md-12 {
       background: lightcoral;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
       margin-right: 10px;
-      width: calc(((100%/12) * 12) - 20px); } }
+      width: calc(((100%/12) * 12) - 20px); }
+    .grid-container .offset-md-12 {
+      margin-left: calc(((100%/12) * 12) + 20px/2); } }
   @media (min-width: 1239.01px) and (max-width: 1599px) {
     .grid-container .col-lg-1 {
       background: purple;
@@ -425,6 +473,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 1) - 20px); }
+    .grid-container .offset-lg-1 {
+      margin-left: calc(((100%/18) * 1) + 20px/2); }
     .grid-container .col-lg-2 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -432,6 +482,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 2) - 20px); }
+    .grid-container .offset-lg-2 {
+      margin-left: calc(((100%/18) * 2) + 20px/2); }
     .grid-container .col-lg-3 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -439,6 +491,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 3) - 20px); }
+    .grid-container .offset-lg-3 {
+      margin-left: calc(((100%/18) * 3) + 20px/2); }
     .grid-container .col-lg-4 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -446,6 +500,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 4) - 20px); }
+    .grid-container .offset-lg-4 {
+      margin-left: calc(((100%/18) * 4) + 20px/2); }
     .grid-container .col-lg-5 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -453,6 +509,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 5) - 20px); }
+    .grid-container .offset-lg-5 {
+      margin-left: calc(((100%/18) * 5) + 20px/2); }
     .grid-container .col-lg-6 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -460,6 +518,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 6) - 20px); }
+    .grid-container .offset-lg-6 {
+      margin-left: calc(((100%/18) * 6) + 20px/2); }
     .grid-container .col-lg-7 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -467,6 +527,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 7) - 20px); }
+    .grid-container .offset-lg-7 {
+      margin-left: calc(((100%/18) * 7) + 20px/2); }
     .grid-container .col-lg-8 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -474,6 +536,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 8) - 20px); }
+    .grid-container .offset-lg-8 {
+      margin-left: calc(((100%/18) * 8) + 20px/2); }
     .grid-container .col-lg-9 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -481,6 +545,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 9) - 20px); }
+    .grid-container .offset-lg-9 {
+      margin-left: calc(((100%/18) * 9) + 20px/2); }
     .grid-container .col-lg-10 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -488,6 +554,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 10) - 20px); }
+    .grid-container .offset-lg-10 {
+      margin-left: calc(((100%/18) * 10) + 20px/2); }
     .grid-container .col-lg-11 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -495,6 +563,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 11) - 20px); }
+    .grid-container .offset-lg-11 {
+      margin-left: calc(((100%/18) * 11) + 20px/2); }
     .grid-container .col-lg-12 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -502,6 +572,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 12) - 20px); }
+    .grid-container .offset-lg-12 {
+      margin-left: calc(((100%/18) * 12) + 20px/2); }
     .grid-container .col-lg-13 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -509,6 +581,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 13) - 20px); }
+    .grid-container .offset-lg-13 {
+      margin-left: calc(((100%/18) * 13) + 20px/2); }
     .grid-container .col-lg-14 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -516,6 +590,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 14) - 20px); }
+    .grid-container .offset-lg-14 {
+      margin-left: calc(((100%/18) * 14) + 20px/2); }
     .grid-container .col-lg-15 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -523,6 +599,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 15) - 20px); }
+    .grid-container .offset-lg-15 {
+      margin-left: calc(((100%/18) * 15) + 20px/2); }
     .grid-container .col-lg-16 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -530,6 +608,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 16) - 20px); }
+    .grid-container .offset-lg-16 {
+      margin-left: calc(((100%/18) * 16) + 20px/2); }
     .grid-container .col-lg-17 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -537,13 +617,17 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/18) * 17) - 20px); }
+    .grid-container .offset-lg-17 {
+      margin-left: calc(((100%/18) * 17) + 20px/2); }
     .grid-container .col-lg-18 {
       background: purple;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
       margin-right: 10px;
-      width: calc(((100%/18) * 18) - 20px); } }
+      width: calc(((100%/18) * 18) - 20px); }
+    .grid-container .offset-lg-18 {
+      margin-left: calc(((100%/18) * 18) + 20px/2); } }
   @media (min-width: 1599.01px) and (max-width: 2339px) {
     .grid-container .col-xl-1 {
       background: chartreuse;
@@ -552,6 +636,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 1) - 20px); }
+    .grid-container .offset-xl-1 {
+      margin-left: calc(((100%/22) * 1) + 20px/2); }
     .grid-container .col-xl-2 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -559,6 +645,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 2) - 20px); }
+    .grid-container .offset-xl-2 {
+      margin-left: calc(((100%/22) * 2) + 20px/2); }
     .grid-container .col-xl-3 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -566,6 +654,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 3) - 20px); }
+    .grid-container .offset-xl-3 {
+      margin-left: calc(((100%/22) * 3) + 20px/2); }
     .grid-container .col-xl-4 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -573,6 +663,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 4) - 20px); }
+    .grid-container .offset-xl-4 {
+      margin-left: calc(((100%/22) * 4) + 20px/2); }
     .grid-container .col-xl-5 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -580,6 +672,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 5) - 20px); }
+    .grid-container .offset-xl-5 {
+      margin-left: calc(((100%/22) * 5) + 20px/2); }
     .grid-container .col-xl-6 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -587,6 +681,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 6) - 20px); }
+    .grid-container .offset-xl-6 {
+      margin-left: calc(((100%/22) * 6) + 20px/2); }
     .grid-container .col-xl-7 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -594,6 +690,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 7) - 20px); }
+    .grid-container .offset-xl-7 {
+      margin-left: calc(((100%/22) * 7) + 20px/2); }
     .grid-container .col-xl-8 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -601,6 +699,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 8) - 20px); }
+    .grid-container .offset-xl-8 {
+      margin-left: calc(((100%/22) * 8) + 20px/2); }
     .grid-container .col-xl-9 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -608,6 +708,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 9) - 20px); }
+    .grid-container .offset-xl-9 {
+      margin-left: calc(((100%/22) * 9) + 20px/2); }
     .grid-container .col-xl-10 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -615,6 +717,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 10) - 20px); }
+    .grid-container .offset-xl-10 {
+      margin-left: calc(((100%/22) * 10) + 20px/2); }
     .grid-container .col-xl-11 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -622,6 +726,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 11) - 20px); }
+    .grid-container .offset-xl-11 {
+      margin-left: calc(((100%/22) * 11) + 20px/2); }
     .grid-container .col-xl-12 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -629,6 +735,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 12) - 20px); }
+    .grid-container .offset-xl-12 {
+      margin-left: calc(((100%/22) * 12) + 20px/2); }
     .grid-container .col-xl-13 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -636,6 +744,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 13) - 20px); }
+    .grid-container .offset-xl-13 {
+      margin-left: calc(((100%/22) * 13) + 20px/2); }
     .grid-container .col-xl-14 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -643,6 +753,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 14) - 20px); }
+    .grid-container .offset-xl-14 {
+      margin-left: calc(((100%/22) * 14) + 20px/2); }
     .grid-container .col-xl-15 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -650,6 +762,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 15) - 20px); }
+    .grid-container .offset-xl-15 {
+      margin-left: calc(((100%/22) * 15) + 20px/2); }
     .grid-container .col-xl-16 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -657,6 +771,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 16) - 20px); }
+    .grid-container .offset-xl-16 {
+      margin-left: calc(((100%/22) * 16) + 20px/2); }
     .grid-container .col-xl-17 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -664,6 +780,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 17) - 20px); }
+    .grid-container .offset-xl-17 {
+      margin-left: calc(((100%/22) * 17) + 20px/2); }
     .grid-container .col-xl-18 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -671,6 +789,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 18) - 20px); }
+    .grid-container .offset-xl-18 {
+      margin-left: calc(((100%/22) * 18) + 20px/2); }
     .grid-container .col-xl-19 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -678,6 +798,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 19) - 20px); }
+    .grid-container .offset-xl-19 {
+      margin-left: calc(((100%/22) * 19) + 20px/2); }
     .grid-container .col-xl-20 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -685,6 +807,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 20) - 20px); }
+    .grid-container .offset-xl-20 {
+      margin-left: calc(((100%/22) * 20) + 20px/2); }
     .grid-container .col-xl-21 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -692,13 +816,17 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/22) * 21) - 20px); }
+    .grid-container .offset-xl-21 {
+      margin-left: calc(((100%/22) * 21) + 20px/2); }
     .grid-container .col-xl-22 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
       margin-right: 10px;
-      width: calc(((100%/22) * 22) - 20px); } }
+      width: calc(((100%/22) * 22) - 20px); }
+    .grid-container .offset-xl-22 {
+      margin-left: calc(((100%/22) * 22) + 20px/2); } }
   @media (min-width: 2339.01px) {
     .grid-container .col-xxl-1 {
       background: aqua;
@@ -707,6 +835,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 1) - 20px); }
+    .grid-container .offset-xxl-1 {
+      margin-left: calc(((100%/26) * 1) + 20px/2); }
     .grid-container .col-xxl-2 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -714,6 +844,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 2) - 20px); }
+    .grid-container .offset-xxl-2 {
+      margin-left: calc(((100%/26) * 2) + 20px/2); }
     .grid-container .col-xxl-3 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -721,6 +853,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 3) - 20px); }
+    .grid-container .offset-xxl-3 {
+      margin-left: calc(((100%/26) * 3) + 20px/2); }
     .grid-container .col-xxl-4 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -728,6 +862,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 4) - 20px); }
+    .grid-container .offset-xxl-4 {
+      margin-left: calc(((100%/26) * 4) + 20px/2); }
     .grid-container .col-xxl-5 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -735,6 +871,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 5) - 20px); }
+    .grid-container .offset-xxl-5 {
+      margin-left: calc(((100%/26) * 5) + 20px/2); }
     .grid-container .col-xxl-6 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -742,6 +880,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 6) - 20px); }
+    .grid-container .offset-xxl-6 {
+      margin-left: calc(((100%/26) * 6) + 20px/2); }
     .grid-container .col-xxl-7 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -749,6 +889,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 7) - 20px); }
+    .grid-container .offset-xxl-7 {
+      margin-left: calc(((100%/26) * 7) + 20px/2); }
     .grid-container .col-xxl-8 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -756,6 +898,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 8) - 20px); }
+    .grid-container .offset-xxl-8 {
+      margin-left: calc(((100%/26) * 8) + 20px/2); }
     .grid-container .col-xxl-9 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -763,6 +907,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 9) - 20px); }
+    .grid-container .offset-xxl-9 {
+      margin-left: calc(((100%/26) * 9) + 20px/2); }
     .grid-container .col-xxl-10 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -770,6 +916,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 10) - 20px); }
+    .grid-container .offset-xxl-10 {
+      margin-left: calc(((100%/26) * 10) + 20px/2); }
     .grid-container .col-xxl-11 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -777,6 +925,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 11) - 20px); }
+    .grid-container .offset-xxl-11 {
+      margin-left: calc(((100%/26) * 11) + 20px/2); }
     .grid-container .col-xxl-12 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -784,6 +934,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 12) - 20px); }
+    .grid-container .offset-xxl-12 {
+      margin-left: calc(((100%/26) * 12) + 20px/2); }
     .grid-container .col-xxl-13 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -791,6 +943,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 13) - 20px); }
+    .grid-container .offset-xxl-13 {
+      margin-left: calc(((100%/26) * 13) + 20px/2); }
     .grid-container .col-xxl-14 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -798,6 +952,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 14) - 20px); }
+    .grid-container .offset-xxl-14 {
+      margin-left: calc(((100%/26) * 14) + 20px/2); }
     .grid-container .col-xxl-15 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -805,6 +961,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 15) - 20px); }
+    .grid-container .offset-xxl-15 {
+      margin-left: calc(((100%/26) * 15) + 20px/2); }
     .grid-container .col-xxl-16 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -812,6 +970,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 16) - 20px); }
+    .grid-container .offset-xxl-16 {
+      margin-left: calc(((100%/26) * 16) + 20px/2); }
     .grid-container .col-xxl-17 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -819,6 +979,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 17) - 20px); }
+    .grid-container .offset-xxl-17 {
+      margin-left: calc(((100%/26) * 17) + 20px/2); }
     .grid-container .col-xxl-18 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -826,6 +988,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 18) - 20px); }
+    .grid-container .offset-xxl-18 {
+      margin-left: calc(((100%/26) * 18) + 20px/2); }
     .grid-container .col-xxl-19 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -833,6 +997,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 19) - 20px); }
+    .grid-container .offset-xxl-19 {
+      margin-left: calc(((100%/26) * 19) + 20px/2); }
     .grid-container .col-xxl-20 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -840,6 +1006,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 20) - 20px); }
+    .grid-container .offset-xxl-20 {
+      margin-left: calc(((100%/26) * 20) + 20px/2); }
     .grid-container .col-xxl-21 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -847,6 +1015,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 21) - 20px); }
+    .grid-container .offset-xxl-21 {
+      margin-left: calc(((100%/26) * 21) + 20px/2); }
     .grid-container .col-xxl-22 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -854,6 +1024,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 22) - 20px); }
+    .grid-container .offset-xxl-22 {
+      margin-left: calc(((100%/26) * 22) + 20px/2); }
     .grid-container .col-xxl-23 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -861,6 +1033,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 23) - 20px); }
+    .grid-container .offset-xxl-23 {
+      margin-left: calc(((100%/26) * 23) + 20px/2); }
     .grid-container .col-xxl-24 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -868,6 +1042,8 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 24) - 20px); }
+    .grid-container .offset-xxl-24 {
+      margin-left: calc(((100%/26) * 24) + 20px/2); }
     .grid-container .col-xxl-25 {
       background: aqua;
       -webkit-box-sizing: border-box;
@@ -875,13 +1051,17 @@ __________           ____ ___
       margin-left: 10px;
       margin-right: 10px;
       width: calc(((100%/26) * 25) - 20px); }
+    .grid-container .offset-xxl-25 {
+      margin-left: calc(((100%/26) * 25) + 20px/2); }
     .grid-container .col-xxl-26 {
       background: aqua;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
       margin-right: 10px;
-      width: calc(((100%/26) * 26) - 20px); } }
+      width: calc(((100%/26) * 26) - 20px); }
+    .grid-container .offset-xxl-26 {
+      margin-left: calc(((100%/26) * 26) + 20px/2); } }
 
 .no-gutter {
   margin-left: 0;
