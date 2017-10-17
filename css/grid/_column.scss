@@ -59,13 +59,6 @@
             margin-left: -$column-gutter/2;
             margin-right: -$column-gutter/2;
         }
-        
-        > [class*="col-"] { 
-            &.full-size {
-                margin-left: -$column-gutter/2;
-                margin-right: -$column-gutter/2;
-            }
-        }
     }
 
     @include sm-only {
@@ -78,6 +71,8 @@
                 width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
+                    margin-left: -$column-gutter/2;
+                    margin-right: -$column-gutter/2;
                     width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
@@ -97,6 +92,8 @@
                 width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
+                    margin-left: -$column-gutter/2;
+                    margin-right: -$column-gutter/2;
                     width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
@@ -116,6 +113,8 @@
                 width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter}); 
 
                 &.full-size {
+                    margin-left: -$column-gutter/2;
+                    margin-right: -$column-gutter/2;
                     width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
@@ -135,6 +134,8 @@
                 width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter});
                 
                 &.full-size {
+                    margin-left: -$column-gutter/2;
+                    margin-right: -$column-gutter/2;
                     width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
@@ -154,6 +155,8 @@
                 width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter});
 
                 &.full-size {
+                    margin-left: -$column-gutter/2;
+                    margin-right: -$column-gutter/2;
                     width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
                 }
             }
