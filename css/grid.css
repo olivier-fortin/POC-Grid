@@ -5,7 +5,6 @@ __________           ____ ___
  |    |   \ /_____/ |    |  /   |   |______  /         |______/|___|  /
         \/                       \/ 
 */
-/* VISIBLE */
 .show {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -14,18 +13,10 @@ __________           ____ ___
   visibility: visible; }
 
 @media (min-width: 320px) and (max-width: 640px) {
-  .visible-sm {
-    display: none !important;
-    visibility: hidden; }
-  .visible-md {
-    display: none !important;
-    visibility: hidden; }
-  .visible-lg {
-    display: none !important;
-    visibility: hidden; }
-  .visible-xl {
-    display: none !important;
-    visibility: hidden; }
+  .visible-sm,
+  .visible-md,
+  .visible-lg,
+  .visible-xl,
   .visible-xxl {
     display: none !important;
     visibility: hidden; }
@@ -37,18 +28,10 @@ __________           ____ ___
     visibility: visible; } }
 
 @media (min-width: 640.01px) and (max-width: 1023px) {
-  .visible-xs {
-    display: none !important;
-    visibility: hidden; }
-  .visible-md {
-    display: none !important;
-    visibility: hidden; }
-  .visible-lg {
-    display: none !important;
-    visibility: hidden; }
-  .visible-xl {
-    display: none !important;
-    visibility: hidden; }
+  .visible-xs,
+  .visible-md,
+  .visible-lg,
+  .visible-xl,
   .visible-xxl {
     display: none !important;
     visibility: hidden; }
@@ -60,18 +43,10 @@ __________           ____ ___
     visibility: visible; } }
 
 @media (min-width: 1023.01px) and (max-width: 1239px) {
-  .visible-xs {
-    display: none !important;
-    visibility: hidden; }
-  .visible-sm {
-    display: none !important;
-    visibility: hidden; }
-  .visible-lg {
-    display: none !important;
-    visibility: hidden; }
-  .visible-xl {
-    display: none !important;
-    visibility: hidden; }
+  .visible-xs,
+  .visible-sm,
+  .visible-lg,
+  .visible-xl,
   .visible-xxl {
     display: none !important;
     visibility: hidden; }
@@ -83,18 +58,10 @@ __________           ____ ___
     visibility: visible; } }
 
 @media (min-width: 1239.01px) and (max-width: 1599px) {
-  .visible-xs {
-    display: none !important;
-    visibility: hidden; }
-  .visible-sm {
-    display: none !important;
-    visibility: hidden; }
-  .visible-md {
-    display: none !important;
-    visibility: hidden; }
-  .visible-xl {
-    display: none !important;
-    visibility: hidden; }
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-xl,
   .visible-xxl {
     display: none !important;
     visibility: hidden; }
@@ -106,18 +73,10 @@ __________           ____ ___
     visibility: visible; } }
 
 @media (min-width: 1599.01px) and (max-width: 2339px) {
-  .visible-xs {
-    display: none !important;
-    visibility: hidden; }
-  .visible-sm {
-    display: none !important;
-    visibility: hidden; }
-  .visible-md {
-    display: none !important;
-    visibility: hidden; }
-  .visible-lg {
-    display: none !important;
-    visibility: hidden; }
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-lg,
   .visible-xxl {
     display: none !important;
     visibility: hidden; }
@@ -129,18 +88,10 @@ __________           ____ ___
     visibility: visible; } }
 
 @media (min-width: 2339.01px) {
-  .visible-xs {
-    display: none !important;
-    visibility: hidden; }
-  .visible-sm {
-    display: none !important;
-    visibility: hidden; }
-  .visible-md {
-    display: none !important;
-    visibility: hidden; }
-  .visible-lg {
-    display: none !important;
-    visibility: hidden; }
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-lg,
   .visible-xl {
     display: none !important;
     visibility: hidden; }
@@ -151,7 +102,6 @@ __________           ____ ___
     display: flex !important;
     visibility: visible; } }
 
-/* HIDDEN */
 .hide {
   display: none !important;
   visibility: hidden; }
@@ -226,10 +176,6 @@ __________           ____ ___
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       min-height: 20px; }
-      .grid-container > .row > [class*="col-"].full-size,
-      .grid-container > * > .row > [class*="col-"].full-size {
-        margin-left: -10px;
-        margin-right: -10px; }
   @media (min-width: 320px) and (max-width: 640px) {
     .grid-container {
       margin-left: 10px;
@@ -301,6 +247,9 @@ __________           ____ ___
       margin-right: 20px; }
       .grid-container > .row,
       .grid-container > * > .row {
+        margin-left: -10px;
+        margin-right: -10px; }
+      .grid-container > [class*="col-"].full-size {
         margin-left: -10px;
         margin-right: -10px; } }
   @media (min-width: 640.01px) and (max-width: 1023px) {
