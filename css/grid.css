@@ -1,10 +1,12 @@
 /*
-__________           ____ ___       
-\______   \         |    |   \____  
- |    |  _/  ______ |    |   /    \ 
- |    |   \ /_____/ |    |  /   |   |______  /         |______/|___|  /
-        \/                       \/ 
-*/
+  ____      ___  
+ |  _ \    |__ \ 
+ | |_) |_____ ) |
+ |  _ <______/ / 
+ | |_) |    / /_ 
+ |____/    |____|
+
+ */
 .show {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -163,30 +165,62 @@ __________           ____ ___
     margin-right: -10px; }
     .grid-container > .row > [class*="col-"],
     .grid-container > * > .row > [class*="col-"] {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
       min-height: 20px; }
+  @media (min-width: 320px) and (max-width: 640px) {
+    .grid-container .row > * > .row > [class*="col-xs-1"] {
+      background-color: orange !important;
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(((100% / 4) * 1) - 10px / 2); }
+      .grid-container .row > * > .row > [class*="col-xs-1"].full-size {
+        background-color: darkviolet !important;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(((100% / 4) * 1) + 10px * 2); }
+    .grid-container .row > * > .row .offset-xs-1 {
+      margin-left: calc(((100% / 4) * 1) + 10px / 2); }
+    .grid-container .row > * > .row > [class*="col-xs-2"] {
+      background-color: orange !important;
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(((100% / 4) * 2) - 10px / 2); }
+      .grid-container .row > * > .row > [class*="col-xs-2"].full-size {
+        background-color: darkviolet !important;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(((100% / 4) * 2) + 10px * 2); }
+    .grid-container .row > * > .row .offset-xs-2 {
+      margin-left: calc(((100% / 4) * 2) + 10px / 2); }
+    .grid-container .row > * > .row > [class*="col-xs-3"] {
+      background-color: orange !important;
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(((100% / 4) * 3) - 10px / 2); }
+      .grid-container .row > * > .row > [class*="col-xs-3"].full-size {
+        background-color: darkviolet !important;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(((100% / 4) * 3) + 10px * 2); }
+    .grid-container .row > * > .row .offset-xs-3 {
+      margin-left: calc(((100% / 4) * 3) + 10px / 2); }
+    .grid-container .row > * > .row > [class*="col-xs-4"] {
+      background-color: orange !important;
+      margin-left: -5px;
+      margin-right: -5px;
+      width: calc(((100% / 4) * 4) - 10px / 2); }
+      .grid-container .row > * > .row > [class*="col-xs-4"].full-size {
+        background-color: darkviolet !important;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(((100% / 4) * 4) + 10px * 2); }
+    .grid-container .row > * > .row .offset-xs-4 {
+      margin-left: calc(((100% / 4) * 4) + 10px / 2); } }
   @media (min-width: 320px) and (max-width: 640px) {
     .grid-container {
       margin-left: 10px;
       margin-right: 10px; }
       .grid-container > .row,
       .grid-container > * > .row {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
         margin-left: -5px;
         margin-right: -5px; }
       .grid-container .col-xs-1 {
@@ -248,9 +282,6 @@ __________           ____ ___
       .grid-container > .row,
       .grid-container > * > .row {
         margin-left: -10px;
-        margin-right: -10px; }
-      .grid-container > [class*="col-"].full-size {
-        margin-left: -10px;
         margin-right: -10px; } }
   @media (min-width: 640.01px) and (max-width: 1023px) {
     .grid-container .col-sm-1 {
@@ -261,6 +292,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 1) - 20px); }
       .grid-container .col-sm-1.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 1) - 20px + 20px*2); }
     .grid-container .offset-sm-1 {
       margin-left: calc(((100%/8) * 1) + 20px/2); }
@@ -272,6 +305,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 2) - 20px); }
       .grid-container .col-sm-2.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 2) - 20px + 20px*2); }
     .grid-container .offset-sm-2 {
       margin-left: calc(((100%/8) * 2) + 20px/2); }
@@ -283,6 +318,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 3) - 20px); }
       .grid-container .col-sm-3.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 3) - 20px + 20px*2); }
     .grid-container .offset-sm-3 {
       margin-left: calc(((100%/8) * 3) + 20px/2); }
@@ -294,6 +331,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 4) - 20px); }
       .grid-container .col-sm-4.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 4) - 20px + 20px*2); }
     .grid-container .offset-sm-4 {
       margin-left: calc(((100%/8) * 4) + 20px/2); }
@@ -305,6 +344,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 5) - 20px); }
       .grid-container .col-sm-5.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 5) - 20px + 20px*2); }
     .grid-container .offset-sm-5 {
       margin-left: calc(((100%/8) * 5) + 20px/2); }
@@ -316,6 +357,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 6) - 20px); }
       .grid-container .col-sm-6.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 6) - 20px + 20px*2); }
     .grid-container .offset-sm-6 {
       margin-left: calc(((100%/8) * 6) + 20px/2); }
@@ -327,6 +370,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 7) - 20px); }
       .grid-container .col-sm-7.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 7) - 20px + 20px*2); }
     .grid-container .offset-sm-7 {
       margin-left: calc(((100%/8) * 7) + 20px/2); }
@@ -338,6 +383,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/8) * 8) - 20px); }
       .grid-container .col-sm-8.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/8) * 8) - 20px + 20px*2); }
     .grid-container .offset-sm-8 {
       margin-left: calc(((100%/8) * 8) + 20px/2); } }
@@ -350,6 +397,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 1) - 20px); }
       .grid-container .col-md-1.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 1) - 20px + 20px*2); }
     .grid-container .offset-md-1 {
       margin-left: calc(((100%/12) * 1) + 20px/2); }
@@ -361,6 +410,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 2) - 20px); }
       .grid-container .col-md-2.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 2) - 20px + 20px*2); }
     .grid-container .offset-md-2 {
       margin-left: calc(((100%/12) * 2) + 20px/2); }
@@ -372,6 +423,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 3) - 20px); }
       .grid-container .col-md-3.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 3) - 20px + 20px*2); }
     .grid-container .offset-md-3 {
       margin-left: calc(((100%/12) * 3) + 20px/2); }
@@ -383,6 +436,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 4) - 20px); }
       .grid-container .col-md-4.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 4) - 20px + 20px*2); }
     .grid-container .offset-md-4 {
       margin-left: calc(((100%/12) * 4) + 20px/2); }
@@ -394,6 +449,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 5) - 20px); }
       .grid-container .col-md-5.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 5) - 20px + 20px*2); }
     .grid-container .offset-md-5 {
       margin-left: calc(((100%/12) * 5) + 20px/2); }
@@ -405,6 +462,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 6) - 20px); }
       .grid-container .col-md-6.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 6) - 20px + 20px*2); }
     .grid-container .offset-md-6 {
       margin-left: calc(((100%/12) * 6) + 20px/2); }
@@ -416,6 +475,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 7) - 20px); }
       .grid-container .col-md-7.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 7) - 20px + 20px*2); }
     .grid-container .offset-md-7 {
       margin-left: calc(((100%/12) * 7) + 20px/2); }
@@ -427,6 +488,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 8) - 20px); }
       .grid-container .col-md-8.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 8) - 20px + 20px*2); }
     .grid-container .offset-md-8 {
       margin-left: calc(((100%/12) * 8) + 20px/2); }
@@ -438,6 +501,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 9) - 20px); }
       .grid-container .col-md-9.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 9) - 20px + 20px*2); }
     .grid-container .offset-md-9 {
       margin-left: calc(((100%/12) * 9) + 20px/2); }
@@ -449,6 +514,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 10) - 20px); }
       .grid-container .col-md-10.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 10) - 20px + 20px*2); }
     .grid-container .offset-md-10 {
       margin-left: calc(((100%/12) * 10) + 20px/2); }
@@ -460,6 +527,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 11) - 20px); }
       .grid-container .col-md-11.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 11) - 20px + 20px*2); }
     .grid-container .offset-md-11 {
       margin-left: calc(((100%/12) * 11) + 20px/2); }
@@ -471,6 +540,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/12) * 12) - 20px); }
       .grid-container .col-md-12.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/12) * 12) - 20px + 20px*2); }
     .grid-container .offset-md-12 {
       margin-left: calc(((100%/12) * 12) + 20px/2); } }
@@ -483,6 +554,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 1) - 20px); }
       .grid-container .col-lg-1.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 1) - 20px + 20px*2); }
     .grid-container .offset-lg-1 {
       margin-left: calc(((100%/18) * 1) + 20px/2); }
@@ -494,6 +567,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 2) - 20px); }
       .grid-container .col-lg-2.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 2) - 20px + 20px*2); }
     .grid-container .offset-lg-2 {
       margin-left: calc(((100%/18) * 2) + 20px/2); }
@@ -505,6 +580,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 3) - 20px); }
       .grid-container .col-lg-3.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 3) - 20px + 20px*2); }
     .grid-container .offset-lg-3 {
       margin-left: calc(((100%/18) * 3) + 20px/2); }
@@ -516,6 +593,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 4) - 20px); }
       .grid-container .col-lg-4.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 4) - 20px + 20px*2); }
     .grid-container .offset-lg-4 {
       margin-left: calc(((100%/18) * 4) + 20px/2); }
@@ -527,6 +606,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 5) - 20px); }
       .grid-container .col-lg-5.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 5) - 20px + 20px*2); }
     .grid-container .offset-lg-5 {
       margin-left: calc(((100%/18) * 5) + 20px/2); }
@@ -538,6 +619,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 6) - 20px); }
       .grid-container .col-lg-6.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 6) - 20px + 20px*2); }
     .grid-container .offset-lg-6 {
       margin-left: calc(((100%/18) * 6) + 20px/2); }
@@ -549,6 +632,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 7) - 20px); }
       .grid-container .col-lg-7.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 7) - 20px + 20px*2); }
     .grid-container .offset-lg-7 {
       margin-left: calc(((100%/18) * 7) + 20px/2); }
@@ -560,6 +645,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 8) - 20px); }
       .grid-container .col-lg-8.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 8) - 20px + 20px*2); }
     .grid-container .offset-lg-8 {
       margin-left: calc(((100%/18) * 8) + 20px/2); }
@@ -571,6 +658,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 9) - 20px); }
       .grid-container .col-lg-9.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 9) - 20px + 20px*2); }
     .grid-container .offset-lg-9 {
       margin-left: calc(((100%/18) * 9) + 20px/2); }
@@ -582,6 +671,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 10) - 20px); }
       .grid-container .col-lg-10.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 10) - 20px + 20px*2); }
     .grid-container .offset-lg-10 {
       margin-left: calc(((100%/18) * 10) + 20px/2); }
@@ -593,6 +684,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 11) - 20px); }
       .grid-container .col-lg-11.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 11) - 20px + 20px*2); }
     .grid-container .offset-lg-11 {
       margin-left: calc(((100%/18) * 11) + 20px/2); }
@@ -604,6 +697,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 12) - 20px); }
       .grid-container .col-lg-12.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 12) - 20px + 20px*2); }
     .grid-container .offset-lg-12 {
       margin-left: calc(((100%/18) * 12) + 20px/2); }
@@ -615,6 +710,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 13) - 20px); }
       .grid-container .col-lg-13.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 13) - 20px + 20px*2); }
     .grid-container .offset-lg-13 {
       margin-left: calc(((100%/18) * 13) + 20px/2); }
@@ -626,6 +723,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 14) - 20px); }
       .grid-container .col-lg-14.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 14) - 20px + 20px*2); }
     .grid-container .offset-lg-14 {
       margin-left: calc(((100%/18) * 14) + 20px/2); }
@@ -637,6 +736,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 15) - 20px); }
       .grid-container .col-lg-15.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 15) - 20px + 20px*2); }
     .grid-container .offset-lg-15 {
       margin-left: calc(((100%/18) * 15) + 20px/2); }
@@ -648,6 +749,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 16) - 20px); }
       .grid-container .col-lg-16.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 16) - 20px + 20px*2); }
     .grid-container .offset-lg-16 {
       margin-left: calc(((100%/18) * 16) + 20px/2); }
@@ -659,6 +762,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 17) - 20px); }
       .grid-container .col-lg-17.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 17) - 20px + 20px*2); }
     .grid-container .offset-lg-17 {
       margin-left: calc(((100%/18) * 17) + 20px/2); }
@@ -670,6 +775,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/18) * 18) - 20px); }
       .grid-container .col-lg-18.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/18) * 18) - 20px + 20px*2); }
     .grid-container .offset-lg-18 {
       margin-left: calc(((100%/18) * 18) + 20px/2); } }
@@ -682,6 +789,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 1) - 20px); }
       .grid-container .col-xl-1.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 1) - 20px + 20px*2); }
     .grid-container .offset-xl-1 {
       margin-left: calc(((100%/22) * 1) + 20px/2); }
@@ -693,6 +802,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 2) - 20px); }
       .grid-container .col-xl-2.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 2) - 20px + 20px*2); }
     .grid-container .offset-xl-2 {
       margin-left: calc(((100%/22) * 2) + 20px/2); }
@@ -704,6 +815,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 3) - 20px); }
       .grid-container .col-xl-3.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 3) - 20px + 20px*2); }
     .grid-container .offset-xl-3 {
       margin-left: calc(((100%/22) * 3) + 20px/2); }
@@ -715,6 +828,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 4) - 20px); }
       .grid-container .col-xl-4.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 4) - 20px + 20px*2); }
     .grid-container .offset-xl-4 {
       margin-left: calc(((100%/22) * 4) + 20px/2); }
@@ -726,6 +841,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 5) - 20px); }
       .grid-container .col-xl-5.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 5) - 20px + 20px*2); }
     .grid-container .offset-xl-5 {
       margin-left: calc(((100%/22) * 5) + 20px/2); }
@@ -737,6 +854,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 6) - 20px); }
       .grid-container .col-xl-6.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 6) - 20px + 20px*2); }
     .grid-container .offset-xl-6 {
       margin-left: calc(((100%/22) * 6) + 20px/2); }
@@ -748,6 +867,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 7) - 20px); }
       .grid-container .col-xl-7.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 7) - 20px + 20px*2); }
     .grid-container .offset-xl-7 {
       margin-left: calc(((100%/22) * 7) + 20px/2); }
@@ -759,6 +880,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 8) - 20px); }
       .grid-container .col-xl-8.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 8) - 20px + 20px*2); }
     .grid-container .offset-xl-8 {
       margin-left: calc(((100%/22) * 8) + 20px/2); }
@@ -770,6 +893,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 9) - 20px); }
       .grid-container .col-xl-9.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 9) - 20px + 20px*2); }
     .grid-container .offset-xl-9 {
       margin-left: calc(((100%/22) * 9) + 20px/2); }
@@ -781,6 +906,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 10) - 20px); }
       .grid-container .col-xl-10.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 10) - 20px + 20px*2); }
     .grid-container .offset-xl-10 {
       margin-left: calc(((100%/22) * 10) + 20px/2); }
@@ -792,6 +919,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 11) - 20px); }
       .grid-container .col-xl-11.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 11) - 20px + 20px*2); }
     .grid-container .offset-xl-11 {
       margin-left: calc(((100%/22) * 11) + 20px/2); }
@@ -803,6 +932,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 12) - 20px); }
       .grid-container .col-xl-12.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 12) - 20px + 20px*2); }
     .grid-container .offset-xl-12 {
       margin-left: calc(((100%/22) * 12) + 20px/2); }
@@ -814,6 +945,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 13) - 20px); }
       .grid-container .col-xl-13.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 13) - 20px + 20px*2); }
     .grid-container .offset-xl-13 {
       margin-left: calc(((100%/22) * 13) + 20px/2); }
@@ -825,6 +958,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 14) - 20px); }
       .grid-container .col-xl-14.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 14) - 20px + 20px*2); }
     .grid-container .offset-xl-14 {
       margin-left: calc(((100%/22) * 14) + 20px/2); }
@@ -836,6 +971,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 15) - 20px); }
       .grid-container .col-xl-15.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 15) - 20px + 20px*2); }
     .grid-container .offset-xl-15 {
       margin-left: calc(((100%/22) * 15) + 20px/2); }
@@ -847,6 +984,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 16) - 20px); }
       .grid-container .col-xl-16.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 16) - 20px + 20px*2); }
     .grid-container .offset-xl-16 {
       margin-left: calc(((100%/22) * 16) + 20px/2); }
@@ -858,6 +997,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 17) - 20px); }
       .grid-container .col-xl-17.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 17) - 20px + 20px*2); }
     .grid-container .offset-xl-17 {
       margin-left: calc(((100%/22) * 17) + 20px/2); }
@@ -869,6 +1010,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 18) - 20px); }
       .grid-container .col-xl-18.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 18) - 20px + 20px*2); }
     .grid-container .offset-xl-18 {
       margin-left: calc(((100%/22) * 18) + 20px/2); }
@@ -880,6 +1023,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 19) - 20px); }
       .grid-container .col-xl-19.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 19) - 20px + 20px*2); }
     .grid-container .offset-xl-19 {
       margin-left: calc(((100%/22) * 19) + 20px/2); }
@@ -891,6 +1036,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 20) - 20px); }
       .grid-container .col-xl-20.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 20) - 20px + 20px*2); }
     .grid-container .offset-xl-20 {
       margin-left: calc(((100%/22) * 20) + 20px/2); }
@@ -902,6 +1049,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 21) - 20px); }
       .grid-container .col-xl-21.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 21) - 20px + 20px*2); }
     .grid-container .offset-xl-21 {
       margin-left: calc(((100%/22) * 21) + 20px/2); }
@@ -913,6 +1062,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/22) * 22) - 20px); }
       .grid-container .col-xl-22.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/22) * 22) - 20px + 20px*2); }
     .grid-container .offset-xl-22 {
       margin-left: calc(((100%/22) * 22) + 20px/2); } }
@@ -925,6 +1076,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 1) - 20px); }
       .grid-container .col-xxl-1.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 1) - 20px + 20px*2); }
     .grid-container .offset-xxl-1 {
       margin-left: calc(((100%/26) * 1) + 20px/2); }
@@ -936,6 +1089,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 2) - 20px); }
       .grid-container .col-xxl-2.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 2) - 20px + 20px*2); }
     .grid-container .offset-xxl-2 {
       margin-left: calc(((100%/26) * 2) + 20px/2); }
@@ -947,6 +1102,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 3) - 20px); }
       .grid-container .col-xxl-3.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 3) - 20px + 20px*2); }
     .grid-container .offset-xxl-3 {
       margin-left: calc(((100%/26) * 3) + 20px/2); }
@@ -958,6 +1115,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 4) - 20px); }
       .grid-container .col-xxl-4.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 4) - 20px + 20px*2); }
     .grid-container .offset-xxl-4 {
       margin-left: calc(((100%/26) * 4) + 20px/2); }
@@ -969,6 +1128,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 5) - 20px); }
       .grid-container .col-xxl-5.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 5) - 20px + 20px*2); }
     .grid-container .offset-xxl-5 {
       margin-left: calc(((100%/26) * 5) + 20px/2); }
@@ -980,6 +1141,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 6) - 20px); }
       .grid-container .col-xxl-6.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 6) - 20px + 20px*2); }
     .grid-container .offset-xxl-6 {
       margin-left: calc(((100%/26) * 6) + 20px/2); }
@@ -991,6 +1154,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 7) - 20px); }
       .grid-container .col-xxl-7.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 7) - 20px + 20px*2); }
     .grid-container .offset-xxl-7 {
       margin-left: calc(((100%/26) * 7) + 20px/2); }
@@ -1002,6 +1167,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 8) - 20px); }
       .grid-container .col-xxl-8.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 8) - 20px + 20px*2); }
     .grid-container .offset-xxl-8 {
       margin-left: calc(((100%/26) * 8) + 20px/2); }
@@ -1013,6 +1180,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 9) - 20px); }
       .grid-container .col-xxl-9.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 9) - 20px + 20px*2); }
     .grid-container .offset-xxl-9 {
       margin-left: calc(((100%/26) * 9) + 20px/2); }
@@ -1024,6 +1193,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 10) - 20px); }
       .grid-container .col-xxl-10.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 10) - 20px + 20px*2); }
     .grid-container .offset-xxl-10 {
       margin-left: calc(((100%/26) * 10) + 20px/2); }
@@ -1035,6 +1206,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 11) - 20px); }
       .grid-container .col-xxl-11.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 11) - 20px + 20px*2); }
     .grid-container .offset-xxl-11 {
       margin-left: calc(((100%/26) * 11) + 20px/2); }
@@ -1046,6 +1219,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 12) - 20px); }
       .grid-container .col-xxl-12.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 12) - 20px + 20px*2); }
     .grid-container .offset-xxl-12 {
       margin-left: calc(((100%/26) * 12) + 20px/2); }
@@ -1057,6 +1232,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 13) - 20px); }
       .grid-container .col-xxl-13.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 13) - 20px + 20px*2); }
     .grid-container .offset-xxl-13 {
       margin-left: calc(((100%/26) * 13) + 20px/2); }
@@ -1068,6 +1245,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 14) - 20px); }
       .grid-container .col-xxl-14.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 14) - 20px + 20px*2); }
     .grid-container .offset-xxl-14 {
       margin-left: calc(((100%/26) * 14) + 20px/2); }
@@ -1079,6 +1258,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 15) - 20px); }
       .grid-container .col-xxl-15.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 15) - 20px + 20px*2); }
     .grid-container .offset-xxl-15 {
       margin-left: calc(((100%/26) * 15) + 20px/2); }
@@ -1090,6 +1271,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 16) - 20px); }
       .grid-container .col-xxl-16.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 16) - 20px + 20px*2); }
     .grid-container .offset-xxl-16 {
       margin-left: calc(((100%/26) * 16) + 20px/2); }
@@ -1101,6 +1284,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 17) - 20px); }
       .grid-container .col-xxl-17.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 17) - 20px + 20px*2); }
     .grid-container .offset-xxl-17 {
       margin-left: calc(((100%/26) * 17) + 20px/2); }
@@ -1112,6 +1297,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 18) - 20px); }
       .grid-container .col-xxl-18.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 18) - 20px + 20px*2); }
     .grid-container .offset-xxl-18 {
       margin-left: calc(((100%/26) * 18) + 20px/2); }
@@ -1123,6 +1310,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 19) - 20px); }
       .grid-container .col-xxl-19.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 19) - 20px + 20px*2); }
     .grid-container .offset-xxl-19 {
       margin-left: calc(((100%/26) * 19) + 20px/2); }
@@ -1134,6 +1323,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 20) - 20px); }
       .grid-container .col-xxl-20.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 20) - 20px + 20px*2); }
     .grid-container .offset-xxl-20 {
       margin-left: calc(((100%/26) * 20) + 20px/2); }
@@ -1145,6 +1336,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 21) - 20px); }
       .grid-container .col-xxl-21.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 21) - 20px + 20px*2); }
     .grid-container .offset-xxl-21 {
       margin-left: calc(((100%/26) * 21) + 20px/2); }
@@ -1156,6 +1349,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 22) - 20px); }
       .grid-container .col-xxl-22.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 22) - 20px + 20px*2); }
     .grid-container .offset-xxl-22 {
       margin-left: calc(((100%/26) * 22) + 20px/2); }
@@ -1167,6 +1362,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 23) - 20px); }
       .grid-container .col-xxl-23.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 23) - 20px + 20px*2); }
     .grid-container .offset-xxl-23 {
       margin-left: calc(((100%/26) * 23) + 20px/2); }
@@ -1178,6 +1375,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 24) - 20px); }
       .grid-container .col-xxl-24.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 24) - 20px + 20px*2); }
     .grid-container .offset-xxl-24 {
       margin-left: calc(((100%/26) * 24) + 20px/2); }
@@ -1189,6 +1388,8 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 25) - 20px); }
       .grid-container .col-xxl-25.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 25) - 20px + 20px*2); }
     .grid-container .offset-xxl-25 {
       margin-left: calc(((100%/26) * 25) + 20px/2); }
@@ -1200,27 +1401,11 @@ __________           ____ ___
       margin-right: 10px;
       width: calc(((100%/26) * 26) - 20px); }
       .grid-container .col-xxl-26.full-size {
+        margin-left: -10px;
+        margin-right: -10px;
         width: calc(((100%/26) * 26) - 20px + 20px*2); }
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100%/26) * 26) + 20px/2); } }
-
-/*
-    Full-size
-    Utilise seulement sur les blocks prenant 100% de l'ecran
-*/
-.no-gutter {
-  margin-left: 0;
-  margin-right: 0; }
-  .no-gutter > .row,
-  .no-gutter > * > .row {
-    margin-left: 0;
-    margin-right: 0; }
-
-.no-gutter-left {
-  margin-left: 0; }
-
-.no-gutter-right {
-  margin-right: 0; }
 
 .trailer-column-gutter {
   margin-bottom: 20px; }

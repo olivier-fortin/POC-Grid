@@ -11,11 +11,32 @@
         margin-left: -$column-gutter/2;
         margin-right: -$column-gutter/2;
         
-        > [class*="col-"] { 
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        > [class*="col-"] {
+            //display: flex;
+            //flex-direction: row;
+            //flex-wrap: wrap;
             min-height: 20px;
+        }
+    }
+    .row > * > .row {
+        @include xs-only {
+            @for $i from 1 through $column-count-xs {
+                > [class*="col-xs-#{$i}"] {
+                    background-color: orange !important;
+                    margin-left: -$column-gutter-xs/2;
+                    margin-right: -$column-gutter-xs/2;
+                    width: calc(((100% / #{$column-count-xs}) * #{$i}) - #{$column-gutter-xs} / 2);
+                    &.full-size {
+                        background-color: darkviolet !important;
+                        margin-left: -$column-gutter-xs;
+                        margin-right: -$column-gutter-xs;
+                        width: calc(((100% / #{$column-count-xs}) * #{$i}) + #{$column-gutter-xs} * 2);
+                    }
+                }
+                .offset-xs-#{$i} {
+                    margin-left: calc(((100% / #{$column-count-xs}) * #{$i}) + #{$column-gutter-xs} / 2);
+                }
+            }
         }
     }
 
@@ -27,6 +48,8 @@
         > * > .row {
             margin-left: -$column-gutter-xs/2;
             margin-right: -$column-gutter-xs/2;
+
+
         }
 
         @for $i from 1 through $column-count-xs {
