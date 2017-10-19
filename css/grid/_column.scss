@@ -1,6 +1,5 @@
-.grid-container {
+.grid-container .react-view {
     box-sizing: border-box;
-    margin-left: $column-gutter;
     margin-right: $column-gutter;
 
     > .row,
@@ -21,12 +20,11 @@
     }
 
     @include xs-only {
-        margin-left: $column-gutter-xs;
+        margin-left: $navigation-size-xs;
         margin-right: $column-gutter-xs;
         
         > .row,
         > * > .row {
-            //flex-direction: column;
             margin-left: -$column-gutter-xs/2;
             margin-right: -$column-gutter-xs/2;
         }
@@ -38,7 +36,7 @@
                 margin-left: $column-gutter-xs/2;
                 margin-right: $column-gutter-xs/2;
                 width: calc(((100%/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
-                &.full-size {
+                &.full-width {
                     margin-left: -$column-gutter-xs/2;
                     margin-right: -$column-gutter-xs/2;
                     width: calc(((100%/#{$column-count-xs}) * #{$i}) - #{$column-gutter-xs} + #{$column-gutter-xs}*2);
@@ -51,7 +49,6 @@
     }
 
     @include sm {
-        margin-left: $column-gutter;
         margin-right: $column-gutter;
         
         > .row,
@@ -61,108 +58,54 @@
         }
     }
 
-    @include sm-only {
-        @for $i from 1 through $column-count-sm {
-            .col-sm-#{$i} {
-                background: lightsalmon;
-                box-sizing: border-box;
-                margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2;
-                width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter});
-                
-                &.full-size {
-                    margin-left: -$column-gutter/2;
-                    margin-right: -$column-gutter/2;
-                    width: calc(((100%/#{$column-count-sm}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+
+    $col-breakpoints: (
+        'sm' : (
+            'column-count': '$column-count-sm',
+            'bgcolor': lightsalmon
+        ),
+       'md' : (
+            'column-count': '$column-count-md',
+            'bgcolor': chartreuse
+        ),
+        'lg' : (
+            'column-count': '$column-count-lg',
+            'bgcolor': aquamarine
+        ),
+        'xl' : (
+            'column-count': '$column-count-xl',
+            'bgcolor': purple
+        ),
+        'xxl' : (
+            'column-count': '$column-count-xxl',
+            'bgcolor': lightblue
+        )
+    ) !default;
+    
+    
+    @mixin columns-breakpoint {
+        @each $breakpoint in $col-breakpoints {
+            @each map-get($col-breakpoints, $column-count), map-get($col-breakpoints, $bgcolor) in $col-breakpoints {
+                .col-#{map-get($col-breakpoints, $breakpoint)}-#{map-get($col-breakpoints, $column-count)} {
+                    box-sizing: border-box;
+                    margin-left: $column-gutter/2;
+                    margin-right: $column-gutter/2;
+                    width: calc(((100%/#{map-get($col-breakpoints, $column-count)}) * #{$i}) - #{$column-gutter});
+                    
+                    &.full-width {
+                        width: calc(((100%/#{map-get($col-breakpoints, $column-count)}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
+                    }
                 }
-            }
-            .offset-sm-#{$i} {
-                margin-left: calc(((100%/#{$column-count-sm}) * #{$i}) + #{$column-gutter}/2);
+            
+                .offset-#{map-get($col-breakpoints, $breakpoint)}-#{$i} {
+                    margin-left: calc(((100%/#{map-get($col-breakpoints, $column-count)}) * #{$i}) + #{$column-gutter}/2);
+                }
             }
         }
     }
-
-    @include md-only {
-        @for $i from 1 through $column-count-md {
-            .col-md-#{$i} {
-                background: lightcoral;
-                box-sizing: border-box;
-                margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2;
-                width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter});
-                
-                &.full-size {
-                    margin-left: -$column-gutter/2;
-                    margin-right: -$column-gutter/2;
-                    width: calc(((100%/#{$column-count-md}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
-                }
-            }
-            .offset-md-#{$i} {
-                margin-left: calc(((100%/#{$column-count-md}) * #{$i}) + #{$column-gutter}/2);
-            }
-        }
-    }
-
-    @include lg-only {
-        @for $i from 1 through $column-count-lg {
-            .col-lg-#{$i} {
-                background: purple;
-                box-sizing: border-box;
-                margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2; 
-                width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter}); 
-
-                &.full-size {
-                    margin-left: -$column-gutter/2;
-                    margin-right: -$column-gutter/2;
-                    width: calc(((100%/#{$column-count-lg}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
-                }
-            }
-            .offset-lg-#{$i} {
-                margin-left: calc(((100%/#{$column-count-lg}) * #{$i}) + #{$column-gutter}/2);
-            }
-        }
-    }
-
-    @include xl-only {
-        @for $i from 1 through $column-count-xl {
-            .col-xl-#{$i} {
-                background: chartreuse;
-                box-sizing: border-box;
-                margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2;
-                width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter});
-                
-                &.full-size {
-                    margin-left: -$column-gutter/2;
-                    margin-right: -$column-gutter/2;
-                    width: calc(((100%/#{$column-count-xl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
-                }
-            }
-            .offset-xl-#{$i} {
-                margin-left: calc(((100%/#{$column-count-xl}) * #{$i}) + #{$column-gutter}/2);
-            }
-        }
-    }
-
-    @include xxl {
-        @for $i from 1 through $column-count-xxl {
-            .col-xxl-#{$i} {
-                background: aqua;
-                box-sizing: border-box;
-                margin-left: $column-gutter/2;
-                margin-right: $column-gutter/2;
-                width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter});
-
-                &.full-size {
-                    margin-left: -$column-gutter/2;
-                    margin-right: -$column-gutter/2;
-                    width: calc(((100%/#{$column-count-xxl}) * #{$i}) - #{$column-gutter} + #{$column-gutter}*2); 
-                }
-            }
-            .offset-xxl-#{$i} {
-                margin-left: calc(((100%/#{$column-count-xxl}) * #{$i}) + #{$column-gutter}/2);
-            }
-        }
-    }
+    
+    @for $i from 1 through $col-breakpoints {
+        @include columns-breakpoint();
+    } 
+    
 }
