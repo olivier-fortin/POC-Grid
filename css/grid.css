@@ -167,10 +167,10 @@
     margin-left: 0;
     margin-right: 0; }
     @media (min-width: 320px) and (max-width: 640px) {
-      .grid-container .row > * > .row .col-xs-4.full-width {
+      .grid-container .row > * > .row .full-width {
         background-color: darkviolet;
         margin-left: -10px;
-        width: calc(100% + 10px + 10px); }
+        width: calc(100% + (10px *2)); }
       .grid-container .row > * > .row > [class*="col-xs-1"] {
         margin-left: 0;
         margin-right: 0;
@@ -203,7 +203,7 @@
       .grid-container > * > .row {
         margin-left: -5px;
         margin-right: -5px; }
-      .grid-container .col-xs-4.full-width {
+      .grid-container .full-width {
         background-color: darkviolet;
         margin-left: -5px;
         margin-right: -5px;
@@ -252,10 +252,11 @@
         margin-left: -10px;
         margin-right: -10px; } }
   @media (min-width: 640.01px) and (max-width: 1023px) {
-    .grid-container .col-sm-8.full-width {
+    .grid-container .full-width {
+      background: silver;
       margin-left: calc(-20px/2);
       margin-right: calc(-20px/2);
-      width: calc((100% - 20px + 20px * 2)); }
+      width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-sm-1 {
       background: lightsalmon;
       -webkit-box-sizing: border-box;
@@ -329,10 +330,11 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 8) + 20px / 2); } }
   @media (min-width: 1023.01px) and (max-width: 1239px) {
-    .grid-container .col-md-12.full-width {
+    .grid-container .full-width {
+      background: silver;
       margin-left: calc(-20px/2);
       margin-right: calc(-20px/2);
-      width: calc((100% - 20px + 20px * 2)); }
+      width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-md-1 {
       background: chartreuse;
       -webkit-box-sizing: border-box;
@@ -442,10 +444,11 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 12) + 20px / 2); } }
   @media (min-width: 1239.01px) and (max-width: 1599px) {
-    .grid-container .col-lg-18.full-width {
+    .grid-container .full-width {
+      background: silver;
       margin-left: calc(-20px/2);
       margin-right: calc(-20px/2);
-      width: calc((100% - 20px + 20px * 2)); }
+      width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-lg-1 {
       background: aquamarine;
       -webkit-box-sizing: border-box;
@@ -609,10 +612,11 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 18) + 20px / 2); } }
   @media (min-width: 1599.01px) and (max-width: 2339px) {
-    .grid-container .col-xl-22.full-width {
+    .grid-container .full-width {
+      background: silver;
       margin-left: calc(-20px/2);
       margin-right: calc(-20px/2);
-      width: calc((100% - 20px + 20px * 2)); }
+      width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-xl-1 {
       background: purple;
       -webkit-box-sizing: border-box;
@@ -812,10 +816,11 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 22) + 20px / 2); } }
   @media (min-width: 2339.01px) and (max-width: 3840px) {
-    .grid-container .col-xxl-26.full-width {
+    .grid-container .full-width {
+      background: silver;
       margin-left: calc(-20px/2);
       margin-right: calc(-20px/2);
-      width: calc((100% - 20px + 20px * 2)); }
+      width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-xxl-1 {
       background: lightblue;
       -webkit-box-sizing: border-box;

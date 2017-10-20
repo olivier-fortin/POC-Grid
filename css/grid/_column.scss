@@ -19,11 +19,10 @@
 
         @include xs-only {
 
-            .col-xs-#{$column-count-xs}.full-width {
+            .full-width {
                 background-color: darkviolet;
                 margin-left: -$column-gutter-xs;
-                //margin-right: -$column-gutter-xs/2;
-                width: calc(100% + #{$column-gutter-xs} + #{$column-gutter-xs});
+                width: calc(100% + (#{$column-gutter-xs} *2));
             }
 
             @for $i from 1 through $column-count-xs {
@@ -41,7 +40,6 @@
 
     @include xs-only {
         margin-left: $column-gutter-xs;
-        //margin-left: $navigation-size-xs;
         margin-right: $column-gutter-xs;
 
         > .row,
@@ -51,7 +49,7 @@
 
         }
 
-        .col-xs-#{$column-count-xs}.full-width {
+       .full-width {
             background-color: darkviolet;
             margin-left: -$column-gutter-xs/2;
             margin-right: -$column-gutter-xs/2;
@@ -87,14 +85,14 @@
             (lg, $min-large, $max-large, $column-count-lg, aquamarine),
             (xl, $min-xlarge, $max-xlarge, $column-count-xl, purple),
             (xxl, $min-xxlarge, $max-xxlarge, $column-count-xxl, lightblue) {
+
         @media (min-width: #{$min}) and (max-width: #{$max}) {
 
-            .col-#{$breakpoint}-#{$column} {
-                &.full-width {
-                    margin-left: calc(-#{$column-gutter}/2);
-                    margin-right: calc(-#{$column-gutter}/2);
-                    width: calc((100% - #{$column-gutter} + #{$column-gutter} * 2);
-                }
+            .full-width {
+                background: silver;
+                margin-left: calc(-#{$column-gutter}/2);
+                margin-right: calc(-#{$column-gutter}/2);
+                width: calc((100% - #{$column-gutter} + (#{$column-gutter} * 2));
             }
 
             @for $i from 1 through $column {
@@ -105,6 +103,7 @@
                     margin-right: $column-gutter/2;
                     width: calc(((100% / #{$column}) * #{$i}) - #{$column-gutter});
                 }
+                
                 .offset-#{$breakpoint}-#{$column} {
                     margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
                 }
