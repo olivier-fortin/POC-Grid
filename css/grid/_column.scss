@@ -13,6 +13,7 @@
         margin-left: -$column-gutter/2;
         margin-right: -$column-gutter/2;
     }
+
     .row > * > .row {
         margin-left: 0;
         margin-right: 0;
@@ -80,11 +81,42 @@
         }
     }
 
-    @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
+    .row > * > .row {
+        @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
             (md, $min-medium, $max-medium, $column-count-md, chartreuse),
             (lg, $min-large, $max-large, $column-count-lg, aquamarine),
             (xl, $min-xlarge, $max-xlarge, $column-count-xl, purple),
             (xxl, $min-xxlarge, $max-xxlarge, $column-count-xxl, lightblue) {
+
+            @media (min-width: #{$min}) and (max-width: #{$max}) {
+
+                .full-width {
+                    background: silver;
+                    margin-left: -$column-gutter;
+                    margin-right: 0;
+                    width: calc(100% + (#{$column-gutter} * 2));
+                }
+
+                @for $i from 1 through $column {
+                    > [class*="col-#{$breakpoint}-#{$i}"] {
+                        margin-left: 0;
+                        margin-right: 0;
+                        width: calc(((100% / #{$column}) * #{$i}) + (#{$column-gutter}/2 * #{$i}/2) - #{$column-gutter});
+                    }
+                    
+                    .offset-#{$breakpoint}-#{$column} {
+                        margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
+                    }
+                }
+            }
+        }
+    }
+
+    @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
+        (md, $min-medium, $max-medium, $column-count-md, chartreuse),
+        (lg, $min-large, $max-large, $column-count-lg, aquamarine),
+        (xl, $min-xlarge, $max-xlarge, $column-count-xl, purple),
+        (xxl, $min-xxlarge, $max-xxlarge, $column-count-xxl, lightblue) {
 
         @media (min-width: #{$min}) and (max-width: #{$max}) {
 
@@ -110,4 +142,5 @@
             }
         }
     }
+
 }
