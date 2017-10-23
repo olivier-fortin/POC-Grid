@@ -101,7 +101,7 @@
                     > [class*="col-#{$breakpoint}-#{$i}"] {
                         margin-left: 0;
                         margin-right: 0;
-                        width: calc(((100% / #{$column}) * #{$i}) + (#{$column-gutter}/2 * #{$i}/2) - #{$column-gutter});
+                        width: calc((((100% - #{$column-gutter} * #{$i}-1) / #{$column}) * #{$i}) - (#{$column-gutter}/2) * #{$i});
                     }
                     
                     .offset-#{$breakpoint}-#{$column} {
