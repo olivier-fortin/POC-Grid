@@ -8,10 +8,10 @@
 
  */
 .show {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   visibility: visible; }
 
 @media (min-width: 320px) and (max-width: 640px) {
@@ -23,10 +23,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-xs {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 @media (min-width: 640.01px) and (max-width: 1023px) {
@@ -38,10 +38,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-sm {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 @media (min-width: 1023.01px) and (max-width: 1239px) {
@@ -53,10 +53,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-md {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 @media (min-width: 1239.01px) and (max-width: 1599px) {
@@ -68,10 +68,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-lg {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 @media (min-width: 1599.01px) and (max-width: 2339px) {
@@ -83,10 +83,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-xl {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 @media (min-width: 2339.01px) {
@@ -98,10 +98,10 @@
     display: none !important;
     visibility: hidden; }
   .visible-xxl {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     visibility: visible; } }
 
 .hide {
@@ -258,8 +258,6 @@
       margin-right: 0;
       width: calc(100% + (20px * 2)); }
     .grid-container .row > * > .row > [class*="col-sm-1"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -269,12 +267,10 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc(((100% - ((8 - 1) * 20px)) / (8))); }
+      display: inline-block; }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 1) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-2"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -284,12 +280,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 2) - 20px)) / ((8 * 2)) + (20px * (2 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-2"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 2) - 20px) + ((20px / 8) * 2)); }
+      .grid-container .row > * > .row > [class*="col-sm-2"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 2) - 20px) - ((20px / 8) * 2)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 2) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-3"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -299,12 +301,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 3) - 20px)) / ((8 * 3)) + (20px * (3 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-3"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 3) - 20px) + ((20px / 8) * 3)); }
+      .grid-container .row > * > .row > [class*="col-sm-3"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 3) - 20px) - ((20px / 8) * 3)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 3) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-4"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -314,12 +322,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 4) - 20px)) / ((8 * 4)) + (20px * (4 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-4"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 4) - 20px) + ((20px / 8) * 4)); }
+      .grid-container .row > * > .row > [class*="col-sm-4"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 4) - 20px) - ((20px / 8) * 4)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 4) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-5"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -329,12 +343,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 5) - 20px)) / ((8 * 5)) + (20px * (5 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-5"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 5) - 20px) + ((20px / 8) * 5)); }
+      .grid-container .row > * > .row > [class*="col-sm-5"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 5) - 20px) - ((20px / 8) * 5)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 5) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-6"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -344,12 +364,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 6) - 20px)) / ((8 * 6)) + (20px * (6 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-6"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 6) - 20px) + ((20px / 8) * 6)); }
+      .grid-container .row > * > .row > [class*="col-sm-6"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 6) - 20px) - ((20px / 8) * 6)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 6) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-7"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -359,12 +385,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 7) - 20px)) / ((8 * 7)) + (20px * (7 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-sm-7"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 8) * 7) - 20px) + ((20px / 8) * 7)); }
+      .grid-container .row > * > .row > [class*="col-sm-7"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 8) * 7) - 20px) - ((20px / 8) * 7)); }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 7) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-sm-8"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -374,6 +406,8 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
+      display: inline-block;
+      margin-left: 0;
       width: 100%; }
     .grid-container .row > * > .row .offset-sm-8 {
       margin-left: calc(((100% / 8) * 8) + 20px / 2); } }
@@ -384,8 +418,6 @@
       margin-right: 0;
       width: calc(100% + (20px * 2)); }
     .grid-container .row > * > .row > [class*="col-md-1"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -395,12 +427,10 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc(((100% - ((12 - 1) * 20px)) / (12))); }
+      display: inline-block; }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 1) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-2"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -410,12 +440,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 2) - 20px)) / ((12 * 2)) + (20px * (2 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-2"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 2) - 20px) + ((20px / 12) * 2)); }
+      .grid-container .row > * > .row > [class*="col-md-2"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 2) - 20px) - ((20px / 12) * 2)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 2) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-3"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -425,12 +461,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 3) - 20px)) / ((12 * 3)) + (20px * (3 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-3"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 3) - 20px) + ((20px / 12) * 3)); }
+      .grid-container .row > * > .row > [class*="col-md-3"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 3) - 20px) - ((20px / 12) * 3)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 3) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-4"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -440,12 +482,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 4) - 20px)) / ((12 * 4)) + (20px * (4 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-4"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 4) - 20px) + ((20px / 12) * 4)); }
+      .grid-container .row > * > .row > [class*="col-md-4"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 4) - 20px) - ((20px / 12) * 4)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 4) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-5"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -455,12 +503,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 5) - 20px)) / ((12 * 5)) + (20px * (5 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-5"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 5) - 20px) + ((20px / 12) * 5)); }
+      .grid-container .row > * > .row > [class*="col-md-5"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 5) - 20px) - ((20px / 12) * 5)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 5) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-6"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -470,12 +524,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 6) - 20px)) / ((12 * 6)) + (20px * (6 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-6"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 6) - 20px) + ((20px / 12) * 6)); }
+      .grid-container .row > * > .row > [class*="col-md-6"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 6) - 20px) - ((20px / 12) * 6)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 6) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-7"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -485,12 +545,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 7) - 20px)) / ((12 * 7)) + (20px * (7 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-7"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 7) - 20px) + ((20px / 12) * 7)); }
+      .grid-container .row > * > .row > [class*="col-md-7"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 7) - 20px) - ((20px / 12) * 7)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 7) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-8"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -500,12 +566,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 8) - 20px)) / ((12 * 8)) + (20px * (8 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-8"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 8) - 20px) + ((20px / 12) * 8)); }
+      .grid-container .row > * > .row > [class*="col-md-8"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 8) - 20px) - ((20px / 12) * 8)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 8) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-9"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -515,12 +587,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 9) - 20px)) / ((12 * 9)) + (20px * (9 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-9"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 9) - 20px) + ((20px / 12) * 9)); }
+      .grid-container .row > * > .row > [class*="col-md-9"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 9) - 20px) - ((20px / 12) * 9)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 9) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-10"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -530,12 +608,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 10) - 20px)) / ((12 * 10)) + (20px * (10 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-10"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 10) - 20px) + ((20px / 12) * 10)); }
+      .grid-container .row > * > .row > [class*="col-md-10"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 10) - 20px) - ((20px / 12) * 10)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 10) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-11"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -545,12 +629,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 11) - 20px)) / ((12 * 11)) + (20px * (11 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-md-11"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 12) * 11) - 20px) + ((20px / 12) * 11)); }
+      .grid-container .row > * > .row > [class*="col-md-11"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 12) * 11) - 20px) - ((20px / 12) * 11)); }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 11) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-md-12"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -560,6 +650,8 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
+      display: inline-block;
+      margin-left: 0;
       width: 100%; }
     .grid-container .row > * > .row .offset-md-12 {
       margin-left: calc(((100% / 12) * 12) + 20px / 2); } }
@@ -570,8 +662,6 @@
       margin-right: 0;
       width: calc(100% + (20px * 2)); }
     .grid-container .row > * > .row > [class*="col-lg-1"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -581,12 +671,10 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc(((100% - ((18 - 1) * 20px)) / (18))); }
+      display: inline-block; }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 1) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-2"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -596,12 +684,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 2) - 20px)) / ((18 * 2)) + (20px * (2 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-2"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 2) - 20px) + ((20px / 18) * 2)); }
+      .grid-container .row > * > .row > [class*="col-lg-2"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 2) - 20px) - ((20px / 18) * 2)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 2) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-3"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -611,12 +705,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 3) - 20px)) / ((18 * 3)) + (20px * (3 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-3"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 3) - 20px) + ((20px / 18) * 3)); }
+      .grid-container .row > * > .row > [class*="col-lg-3"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 3) - 20px) - ((20px / 18) * 3)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 3) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-4"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -626,12 +726,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 4) - 20px)) / ((18 * 4)) + (20px * (4 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-4"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 4) - 20px) + ((20px / 18) * 4)); }
+      .grid-container .row > * > .row > [class*="col-lg-4"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 4) - 20px) - ((20px / 18) * 4)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 4) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-5"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -641,12 +747,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 5) - 20px)) / ((18 * 5)) + (20px * (5 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-5"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 5) - 20px) + ((20px / 18) * 5)); }
+      .grid-container .row > * > .row > [class*="col-lg-5"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 5) - 20px) - ((20px / 18) * 5)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 5) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-6"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -656,12 +768,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 6) - 20px)) / ((18 * 6)) + (20px * (6 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-6"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 6) - 20px) + ((20px / 18) * 6)); }
+      .grid-container .row > * > .row > [class*="col-lg-6"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 6) - 20px) - ((20px / 18) * 6)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 6) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-7"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -671,12 +789,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 7) - 20px)) / ((18 * 7)) + (20px * (7 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-7"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 7) - 20px) + ((20px / 18) * 7)); }
+      .grid-container .row > * > .row > [class*="col-lg-7"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 7) - 20px) - ((20px / 18) * 7)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 7) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-8"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -686,12 +810,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 8) - 20px)) / ((18 * 8)) + (20px * (8 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-8"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 8) - 20px) + ((20px / 18) * 8)); }
+      .grid-container .row > * > .row > [class*="col-lg-8"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 8) - 20px) - ((20px / 18) * 8)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 8) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-9"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -701,12 +831,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 9) - 20px)) / ((18 * 9)) + (20px * (9 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-9"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 9) - 20px) + ((20px / 18) * 9)); }
+      .grid-container .row > * > .row > [class*="col-lg-9"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 9) - 20px) - ((20px / 18) * 9)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 9) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-10"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -716,12 +852,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 10) - 20px)) / ((18 * 10)) + (20px * (10 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-10"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 10) - 20px) + ((20px / 18) * 10)); }
+      .grid-container .row > * > .row > [class*="col-lg-10"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 10) - 20px) - ((20px / 18) * 10)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 10) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-11"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -731,12 +873,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 11) - 20px)) / ((18 * 11)) + (20px * (11 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-11"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 11) - 20px) + ((20px / 18) * 11)); }
+      .grid-container .row > * > .row > [class*="col-lg-11"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 11) - 20px) - ((20px / 18) * 11)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 11) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-12"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -746,12 +894,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 12) - 20px)) / ((18 * 12)) + (20px * (12 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-12"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 12) - 20px) + ((20px / 18) * 12)); }
+      .grid-container .row > * > .row > [class*="col-lg-12"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 12) - 20px) - ((20px / 18) * 12)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 12) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-13"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -761,12 +915,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 13) - 20px)) / ((18 * 13)) + (20px * (13 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-13"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 13) - 20px) + ((20px / 18) * 13)); }
+      .grid-container .row > * > .row > [class*="col-lg-13"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 13) - 20px) - ((20px / 18) * 13)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 13) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-14"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -776,12 +936,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 14) - 20px)) / ((18 * 14)) + (20px * (14 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-14"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 14) - 20px) + ((20px / 18) * 14)); }
+      .grid-container .row > * > .row > [class*="col-lg-14"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 14) - 20px) - ((20px / 18) * 14)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 14) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-15"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -791,12 +957,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 15) - 20px)) / ((18 * 15)) + (20px * (15 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-15"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 15) - 20px) + ((20px / 18) * 15)); }
+      .grid-container .row > * > .row > [class*="col-lg-15"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 15) - 20px) - ((20px / 18) * 15)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 15) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-16"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -806,12 +978,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 16) - 20px)) / ((18 * 16)) + (20px * (16 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-16"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 16) - 20px) + ((20px / 18) * 16)); }
+      .grid-container .row > * > .row > [class*="col-lg-16"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 16) - 20px) - ((20px / 18) * 16)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 16) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-17"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -821,12 +999,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 17) - 20px)) / ((18 * 17)) + (20px * (17 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-lg-17"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 18) * 17) - 20px) + ((20px / 18) * 17)); }
+      .grid-container .row > * > .row > [class*="col-lg-17"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 18) * 17) - 20px) - ((20px / 18) * 17)); }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 17) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-lg-18"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -836,6 +1020,8 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
+      display: inline-block;
+      margin-left: 0;
       width: 100%; }
     .grid-container .row > * > .row .offset-lg-18 {
       margin-left: calc(((100% / 18) * 18) + 20px / 2); } }
@@ -846,8 +1032,6 @@
       margin-right: 0;
       width: calc(100% + (20px * 2)); }
     .grid-container .row > * > .row > [class*="col-xl-1"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -857,12 +1041,10 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc(((100% - ((22 - 1) * 20px)) / (22))); }
+      display: inline-block; }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 1) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-2"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -872,12 +1054,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 2) - 20px)) / ((22 * 2)) + (20px * (2 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-2"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 2) - 20px) + ((20px / 22) * 2)); }
+      .grid-container .row > * > .row > [class*="col-xl-2"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 2) - 20px) - ((20px / 22) * 2)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 2) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-3"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -887,12 +1075,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 3) - 20px)) / ((22 * 3)) + (20px * (3 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-3"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 3) - 20px) + ((20px / 22) * 3)); }
+      .grid-container .row > * > .row > [class*="col-xl-3"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 3) - 20px) - ((20px / 22) * 3)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 3) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-4"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -902,12 +1096,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 4) - 20px)) / ((22 * 4)) + (20px * (4 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-4"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 4) - 20px) + ((20px / 22) * 4)); }
+      .grid-container .row > * > .row > [class*="col-xl-4"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 4) - 20px) - ((20px / 22) * 4)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 4) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-5"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -917,12 +1117,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 5) - 20px)) / ((22 * 5)) + (20px * (5 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-5"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 5) - 20px) + ((20px / 22) * 5)); }
+      .grid-container .row > * > .row > [class*="col-xl-5"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 5) - 20px) - ((20px / 22) * 5)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 5) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-6"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -932,12 +1138,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 6) - 20px)) / ((22 * 6)) + (20px * (6 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-6"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 6) - 20px) + ((20px / 22) * 6)); }
+      .grid-container .row > * > .row > [class*="col-xl-6"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 6) - 20px) - ((20px / 22) * 6)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 6) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-7"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -947,12 +1159,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 7) - 20px)) / ((22 * 7)) + (20px * (7 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-7"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 7) - 20px) + ((20px / 22) * 7)); }
+      .grid-container .row > * > .row > [class*="col-xl-7"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 7) - 20px) - ((20px / 22) * 7)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 7) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-8"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -962,12 +1180,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 8) - 20px)) / ((22 * 8)) + (20px * (8 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-8"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 8) - 20px) + ((20px / 22) * 8)); }
+      .grid-container .row > * > .row > [class*="col-xl-8"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 8) - 20px) - ((20px / 22) * 8)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 8) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-9"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -977,12 +1201,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 9) - 20px)) / ((22 * 9)) + (20px * (9 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-9"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 9) - 20px) + ((20px / 22) * 9)); }
+      .grid-container .row > * > .row > [class*="col-xl-9"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 9) - 20px) - ((20px / 22) * 9)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 9) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-10"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -992,12 +1222,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 10) - 20px)) / ((22 * 10)) + (20px * (10 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-10"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 10) - 20px) + ((20px / 22) * 10)); }
+      .grid-container .row > * > .row > [class*="col-xl-10"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 10) - 20px) - ((20px / 22) * 10)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 10) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-11"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1007,12 +1243,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 11) - 20px)) / ((22 * 11)) + (20px * (11 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-11"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 11) - 20px) + ((20px / 22) * 11)); }
+      .grid-container .row > * > .row > [class*="col-xl-11"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 11) - 20px) - ((20px / 22) * 11)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 11) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-12"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1022,12 +1264,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 12) - 20px)) / ((22 * 12)) + (20px * (12 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-12"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 12) - 20px) + ((20px / 22) * 12)); }
+      .grid-container .row > * > .row > [class*="col-xl-12"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 12) - 20px) - ((20px / 22) * 12)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 12) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-13"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1037,12 +1285,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 13) - 20px)) / ((22 * 13)) + (20px * (13 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-13"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 13) - 20px) + ((20px / 22) * 13)); }
+      .grid-container .row > * > .row > [class*="col-xl-13"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 13) - 20px) - ((20px / 22) * 13)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 13) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-14"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1052,12 +1306,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 14) - 20px)) / ((22 * 14)) + (20px * (14 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-14"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 14) - 20px) + ((20px / 22) * 14)); }
+      .grid-container .row > * > .row > [class*="col-xl-14"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 14) - 20px) - ((20px / 22) * 14)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 14) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-15"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1067,12 +1327,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 15) - 20px)) / ((22 * 15)) + (20px * (15 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-15"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 15) - 20px) + ((20px / 22) * 15)); }
+      .grid-container .row > * > .row > [class*="col-xl-15"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 15) - 20px) - ((20px / 22) * 15)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 15) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-16"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1082,12 +1348,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 16) - 20px)) / ((22 * 16)) + (20px * (16 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-16"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 16) - 20px) + ((20px / 22) * 16)); }
+      .grid-container .row > * > .row > [class*="col-xl-16"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 16) - 20px) - ((20px / 22) * 16)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 16) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-17"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1097,12 +1369,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 17) - 20px)) / ((22 * 17)) + (20px * (17 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-17"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 17) - 20px) + ((20px / 22) * 17)); }
+      .grid-container .row > * > .row > [class*="col-xl-17"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 17) - 20px) - ((20px / 22) * 17)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 17) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-18"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1112,12 +1390,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 18) - 20px)) / ((22 * 18)) + (20px * (18 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-18"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 18) - 20px) + ((20px / 22) * 18)); }
+      .grid-container .row > * > .row > [class*="col-xl-18"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 18) - 20px) - ((20px / 22) * 18)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 18) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-19"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1127,12 +1411,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 19) - 20px)) / ((22 * 19)) + (20px * (19 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-19"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 19) - 20px) + ((20px / 22) * 19)); }
+      .grid-container .row > * > .row > [class*="col-xl-19"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 19) - 20px) - ((20px / 22) * 19)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 19) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-20"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1142,12 +1432,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 20) - 20px)) / ((22 * 20)) + (20px * (20 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-20"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 20) - 20px) + ((20px / 22) * 20)); }
+      .grid-container .row > * > .row > [class*="col-xl-20"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 20) - 20px) - ((20px / 22) * 20)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 20) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-21"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1157,12 +1453,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 21) - 20px)) / ((22 * 21)) + (20px * (21 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xl-21"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 22) * 21) - 20px) + ((20px / 22) * 21)); }
+      .grid-container .row > * > .row > [class*="col-xl-21"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 22) * 21) - 20px) - ((20px / 22) * 21)); }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 21) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xl-22"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1172,6 +1474,8 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
+      display: inline-block;
+      margin-left: 0;
       width: 100%; }
     .grid-container .row > * > .row .offset-xl-22 {
       margin-left: calc(((100% / 22) * 22) + 20px / 2); } }
@@ -1182,8 +1486,6 @@
       margin-right: 0;
       width: calc(100% + (20px * 2)); }
     .grid-container .row > * > .row > [class*="col-xxl-1"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1193,12 +1495,10 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc(((100% - ((26 - 1) * 20px)) / (26))); }
+      display: inline-block; }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 1) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-2"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1208,12 +1508,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 2) - 20px)) / ((26 * 2)) + (20px * (2 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-2"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 2) - 20px) + ((20px / 26) * 2)); }
+      .grid-container .row > * > .row > [class*="col-xxl-2"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 2) - 20px) - ((20px / 26) * 2)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 2) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-3"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1223,12 +1529,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 3) - 20px)) / ((26 * 3)) + (20px * (3 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-3"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 3) - 20px) + ((20px / 26) * 3)); }
+      .grid-container .row > * > .row > [class*="col-xxl-3"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 3) - 20px) - ((20px / 26) * 3)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 3) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-4"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1238,12 +1550,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 4) - 20px)) / ((26 * 4)) + (20px * (4 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-4"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 4) - 20px) + ((20px / 26) * 4)); }
+      .grid-container .row > * > .row > [class*="col-xxl-4"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 4) - 20px) - ((20px / 26) * 4)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 4) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-5"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1253,12 +1571,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 5) - 20px)) / ((26 * 5)) + (20px * (5 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-5"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 5) - 20px) + ((20px / 26) * 5)); }
+      .grid-container .row > * > .row > [class*="col-xxl-5"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 5) - 20px) - ((20px / 26) * 5)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 5) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-6"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1268,12 +1592,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 6) - 20px)) / ((26 * 6)) + (20px * (6 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-6"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 6) - 20px) + ((20px / 26) * 6)); }
+      .grid-container .row > * > .row > [class*="col-xxl-6"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 6) - 20px) - ((20px / 26) * 6)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 6) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-7"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1283,12 +1613,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 7) - 20px)) / ((26 * 7)) + (20px * (7 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-7"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 7) - 20px) + ((20px / 26) * 7)); }
+      .grid-container .row > * > .row > [class*="col-xxl-7"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 7) - 20px) - ((20px / 26) * 7)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 7) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-8"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1298,12 +1634,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 8) - 20px)) / ((26 * 8)) + (20px * (8 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-8"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 8) - 20px) + ((20px / 26) * 8)); }
+      .grid-container .row > * > .row > [class*="col-xxl-8"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 8) - 20px) - ((20px / 26) * 8)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 8) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-9"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1313,12 +1655,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 9) - 20px)) / ((26 * 9)) + (20px * (9 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-9"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 9) - 20px) + ((20px / 26) * 9)); }
+      .grid-container .row > * > .row > [class*="col-xxl-9"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 9) - 20px) - ((20px / 26) * 9)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 9) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-10"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1328,12 +1676,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 10) - 20px)) / ((26 * 10)) + (20px * (10 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-10"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 10) - 20px) + ((20px / 26) * 10)); }
+      .grid-container .row > * > .row > [class*="col-xxl-10"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 10) - 20px) - ((20px / 26) * 10)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 10) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-11"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1343,12 +1697,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 11) - 20px)) / ((26 * 11)) + (20px * (11 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-11"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 11) - 20px) + ((20px / 26) * 11)); }
+      .grid-container .row > * > .row > [class*="col-xxl-11"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 11) - 20px) - ((20px / 26) * 11)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 11) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-12"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1358,12 +1718,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 12) - 20px)) / ((26 * 12)) + (20px * (12 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-12"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 12) - 20px) + ((20px / 26) * 12)); }
+      .grid-container .row > * > .row > [class*="col-xxl-12"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 12) - 20px) - ((20px / 26) * 12)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 12) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-13"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1373,12 +1739,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 13) - 20px)) / ((26 * 13)) + (20px * (13 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-13"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 13) - 20px) + ((20px / 26) * 13)); }
+      .grid-container .row > * > .row > [class*="col-xxl-13"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 13) - 20px) - ((20px / 26) * 13)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 13) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-14"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1388,12 +1760,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 14) - 20px)) / ((26 * 14)) + (20px * (14 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-14"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 14) - 20px) + ((20px / 26) * 14)); }
+      .grid-container .row > * > .row > [class*="col-xxl-14"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 14) - 20px) - ((20px / 26) * 14)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 14) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-15"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1403,12 +1781,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 15) - 20px)) / ((26 * 15)) + (20px * (15 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-15"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 15) - 20px) + ((20px / 26) * 15)); }
+      .grid-container .row > * > .row > [class*="col-xxl-15"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 15) - 20px) - ((20px / 26) * 15)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 15) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-16"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1418,12 +1802,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 16) - 20px)) / ((26 * 16)) + (20px * (16 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-16"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 16) - 20px) + ((20px / 26) * 16)); }
+      .grid-container .row > * > .row > [class*="col-xxl-16"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 16) - 20px) - ((20px / 26) * 16)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 16) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-17"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1433,12 +1823,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 17) - 20px)) / ((26 * 17)) + (20px * (17 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-17"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 17) - 20px) + ((20px / 26) * 17)); }
+      .grid-container .row > * > .row > [class*="col-xxl-17"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 17) - 20px) - ((20px / 26) * 17)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 17) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-18"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1448,12 +1844,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 18) - 20px)) / ((26 * 18)) + (20px * (18 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-18"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 18) - 20px) + ((20px / 26) * 18)); }
+      .grid-container .row > * > .row > [class*="col-xxl-18"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 18) - 20px) - ((20px / 26) * 18)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 18) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-19"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1463,12 +1865,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 19) - 20px)) / ((26 * 19)) + (20px * (19 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-19"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 19) - 20px) + ((20px / 26) * 19)); }
+      .grid-container .row > * > .row > [class*="col-xxl-19"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 19) - 20px) - ((20px / 26) * 19)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 19) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-20"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1478,12 +1886,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 20) - 20px)) / ((26 * 20)) + (20px * (20 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-20"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 20) - 20px) + ((20px / 26) * 20)); }
+      .grid-container .row > * > .row > [class*="col-xxl-20"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 20) - 20px) - ((20px / 26) * 20)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 20) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-21"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1493,12 +1907,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 21) - 20px)) / ((26 * 21)) + (20px * (21 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-21"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 21) - 20px) + ((20px / 26) * 21)); }
+      .grid-container .row > * > .row > [class*="col-xxl-21"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 21) - 20px) - ((20px / 26) * 21)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 21) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-22"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1508,12 +1928,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 22) - 20px)) / ((26 * 22)) + (20px * (22 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-22"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 22) - 20px) + ((20px / 26) * 22)); }
+      .grid-container .row > * > .row > [class*="col-xxl-22"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 22) - 20px) - ((20px / 26) * 22)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 22) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-23"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1523,12 +1949,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 23) - 20px)) / ((26 * 23)) + (20px * (23 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-23"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 23) - 20px) + ((20px / 26) * 23)); }
+      .grid-container .row > * > .row > [class*="col-xxl-23"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 23) - 20px) - ((20px / 26) * 23)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 23) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-24"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1538,12 +1970,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 24) - 20px)) / ((26 * 24)) + (20px * (24 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-24"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 24) - 20px) + ((20px / 26) * 24)); }
+      .grid-container .row > * > .row > [class*="col-xxl-24"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 24) - 20px) - ((20px / 26) * 24)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 24) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-25"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1553,12 +1991,18 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
-      width: calc( ((100% - ((20px * 25) - 20px)) / ((26 * 25)) + (20px * (25 - 1)))); }
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+      .grid-container .row > * > .row > [class*="col-xxl-25"]:first-child {
+        margin-left: 0;
+        width: calc((((100% / 26) * 25) - 20px) + ((20px / 26) * 25)); }
+      .grid-container .row > * > .row > [class*="col-xxl-25"]:last-child {
+        margin-right: 0;
+        width: calc((((100% / 26) * 25) - 20px) - ((20px / 26) * 25)); }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 25) + 20px / 2); }
     .grid-container .row > * > .row > [class*="col-xxl-26"] {
-      margin-left: 0;
-      margin-right: 0;
       /* 
                             100% sm : 601px
                             pour sm 8 cols : 461px + 140px gutters = 601px
@@ -1568,6 +2012,8 @@
                             pour sm 2 cols : 115.25px + 20px gutters = 135.25px
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
+      display: inline-block;
+      margin-left: 0;
       width: 100%; }
     .grid-container .row > * > .row .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 26) + 20px / 2); } }
@@ -1578,7 +2024,7 @@
       margin-right: calc(-20px/2);
       width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-sm-1 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1587,7 +2033,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 1) + 20px / 2); }
     .grid-container .col-sm-2 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1596,7 +2042,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 2) + 20px / 2); }
     .grid-container .col-sm-3 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1605,7 +2051,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 3) + 20px / 2); }
     .grid-container .col-sm-4 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1614,7 +2060,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 4) + 20px / 2); }
     .grid-container .col-sm-5 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1623,7 +2069,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 5) + 20px / 2); }
     .grid-container .col-sm-6 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1632,7 +2078,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 6) + 20px / 2); }
     .grid-container .col-sm-7 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1641,7 +2087,7 @@
     .grid-container .offset-sm-8 {
       margin-left: calc(((100% / 8) * 7) + 20px / 2); }
     .grid-container .col-sm-8 {
-      background-color: lightsalmon;
+      background-color: #ffb294;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1656,7 +2102,7 @@
       margin-right: calc(-20px/2);
       width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-md-1 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1665,7 +2111,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 1) + 20px / 2); }
     .grid-container .col-md-2 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1674,7 +2120,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 2) + 20px / 2); }
     .grid-container .col-md-3 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1683,7 +2129,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 3) + 20px / 2); }
     .grid-container .col-md-4 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1692,7 +2138,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 4) + 20px / 2); }
     .grid-container .col-md-5 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1701,7 +2147,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 5) + 20px / 2); }
     .grid-container .col-md-6 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1710,7 +2156,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 6) + 20px / 2); }
     .grid-container .col-md-7 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1719,7 +2165,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 7) + 20px / 2); }
     .grid-container .col-md-8 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1728,7 +2174,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 8) + 20px / 2); }
     .grid-container .col-md-9 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1737,7 +2183,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 9) + 20px / 2); }
     .grid-container .col-md-10 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1746,7 +2192,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 10) + 20px / 2); }
     .grid-container .col-md-11 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1755,7 +2201,7 @@
     .grid-container .offset-md-12 {
       margin-left: calc(((100% / 12) * 11) + 20px / 2); }
     .grid-container .col-md-12 {
-      background-color: chartreuse;
+      background-color: #8cff1a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1770,7 +2216,7 @@
       margin-right: calc(-20px/2);
       width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-lg-1 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1779,7 +2225,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 1) + 20px / 2); }
     .grid-container .col-lg-2 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1788,7 +2234,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 2) + 20px / 2); }
     .grid-container .col-lg-3 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1797,7 +2243,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 3) + 20px / 2); }
     .grid-container .col-lg-4 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1806,7 +2252,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 4) + 20px / 2); }
     .grid-container .col-lg-5 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1815,7 +2261,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 5) + 20px / 2); }
     .grid-container .col-lg-6 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1824,7 +2270,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 6) + 20px / 2); }
     .grid-container .col-lg-7 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1833,7 +2279,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 7) + 20px / 2); }
     .grid-container .col-lg-8 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1842,7 +2288,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 8) + 20px / 2); }
     .grid-container .col-lg-9 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1851,7 +2297,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 9) + 20px / 2); }
     .grid-container .col-lg-10 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1860,7 +2306,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 10) + 20px / 2); }
     .grid-container .col-lg-11 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1869,7 +2315,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 11) + 20px / 2); }
     .grid-container .col-lg-12 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1878,7 +2324,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 12) + 20px / 2); }
     .grid-container .col-lg-13 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1887,7 +2333,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 13) + 20px / 2); }
     .grid-container .col-lg-14 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1896,7 +2342,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 14) + 20px / 2); }
     .grid-container .col-lg-15 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1905,7 +2351,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 15) + 20px / 2); }
     .grid-container .col-lg-16 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1914,7 +2360,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 16) + 20px / 2); }
     .grid-container .col-lg-17 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1923,7 +2369,7 @@
     .grid-container .offset-lg-18 {
       margin-left: calc(((100% / 18) * 17) + 20px / 2); }
     .grid-container .col-lg-18 {
-      background-color: aquamarine;
+      background-color: #99ffdd;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1938,7 +2384,7 @@
       margin-right: calc(-20px/2);
       width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-xl-1 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1947,7 +2393,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 1) + 20px / 2); }
     .grid-container .col-xl-2 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1956,7 +2402,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 2) + 20px / 2); }
     .grid-container .col-xl-3 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1965,7 +2411,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 3) + 20px / 2); }
     .grid-container .col-xl-4 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1974,7 +2420,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 4) + 20px / 2); }
     .grid-container .col-xl-5 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1983,7 +2429,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 5) + 20px / 2); }
     .grid-container .col-xl-6 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -1992,7 +2438,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 6) + 20px / 2); }
     .grid-container .col-xl-7 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2001,7 +2447,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 7) + 20px / 2); }
     .grid-container .col-xl-8 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2010,7 +2456,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 8) + 20px / 2); }
     .grid-container .col-xl-9 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2019,7 +2465,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 9) + 20px / 2); }
     .grid-container .col-xl-10 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2028,7 +2474,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 10) + 20px / 2); }
     .grid-container .col-xl-11 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2037,7 +2483,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 11) + 20px / 2); }
     .grid-container .col-xl-12 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2046,7 +2492,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 12) + 20px / 2); }
     .grid-container .col-xl-13 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2055,7 +2501,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 13) + 20px / 2); }
     .grid-container .col-xl-14 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2064,7 +2510,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 14) + 20px / 2); }
     .grid-container .col-xl-15 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2073,7 +2519,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 15) + 20px / 2); }
     .grid-container .col-xl-16 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2082,7 +2528,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 16) + 20px / 2); }
     .grid-container .col-xl-17 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2091,7 +2537,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 17) + 20px / 2); }
     .grid-container .col-xl-18 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2100,7 +2546,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 18) + 20px / 2); }
     .grid-container .col-xl-19 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2109,7 +2555,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 19) + 20px / 2); }
     .grid-container .col-xl-20 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2118,7 +2564,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 20) + 20px / 2); }
     .grid-container .col-xl-21 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2127,7 +2573,7 @@
     .grid-container .offset-xl-22 {
       margin-left: calc(((100% / 22) * 21) + 20px / 2); }
     .grid-container .col-xl-22 {
-      background-color: purple;
+      background-color: #9a009a;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2142,7 +2588,7 @@
       margin-right: calc(-20px/2);
       width: calc((100% - 20px + (20px * 2))); }
     .grid-container .col-xxl-1 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2151,7 +2597,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 1) + 20px / 2); }
     .grid-container .col-xxl-2 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2160,7 +2606,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 2) + 20px / 2); }
     .grid-container .col-xxl-3 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2169,7 +2615,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 3) + 20px / 2); }
     .grid-container .col-xxl-4 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2178,7 +2624,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 4) + 20px / 2); }
     .grid-container .col-xxl-5 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2187,7 +2633,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 5) + 20px / 2); }
     .grid-container .col-xxl-6 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2196,7 +2642,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 6) + 20px / 2); }
     .grid-container .col-xxl-7 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2205,7 +2651,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 7) + 20px / 2); }
     .grid-container .col-xxl-8 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2214,7 +2660,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 8) + 20px / 2); }
     .grid-container .col-xxl-9 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2223,7 +2669,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 9) + 20px / 2); }
     .grid-container .col-xxl-10 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2232,7 +2678,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 10) + 20px / 2); }
     .grid-container .col-xxl-11 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2241,7 +2687,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 11) + 20px / 2); }
     .grid-container .col-xxl-12 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2250,7 +2696,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 12) + 20px / 2); }
     .grid-container .col-xxl-13 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2259,7 +2705,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 13) + 20px / 2); }
     .grid-container .col-xxl-14 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2268,7 +2714,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 14) + 20px / 2); }
     .grid-container .col-xxl-15 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2277,7 +2723,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 15) + 20px / 2); }
     .grid-container .col-xxl-16 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2286,7 +2732,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 16) + 20px / 2); }
     .grid-container .col-xxl-17 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2295,7 +2741,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 17) + 20px / 2); }
     .grid-container .col-xxl-18 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2304,7 +2750,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 18) + 20px / 2); }
     .grid-container .col-xxl-19 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2313,7 +2759,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 19) + 20px / 2); }
     .grid-container .col-xxl-20 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2322,7 +2768,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 20) + 20px / 2); }
     .grid-container .col-xxl-21 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2331,7 +2777,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 21) + 20px / 2); }
     .grid-container .col-xxl-22 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2340,7 +2786,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 22) + 20px / 2); }
     .grid-container .col-xxl-23 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2349,7 +2795,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 23) + 20px / 2); }
     .grid-container .col-xxl-24 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2358,7 +2804,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 24) + 20px / 2); }
     .grid-container .col-xxl-25 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
@@ -2367,7 +2813,7 @@
     .grid-container .offset-xxl-26 {
       margin-left: calc(((100% / 26) * 25) + 20px / 2); }
     .grid-container .col-xxl-26 {
-      background-color: lightblue;
+      background-color: #c1e1ec;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-left: 10px;
