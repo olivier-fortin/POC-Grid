@@ -99,9 +99,34 @@
 
                 @for $i from 1 through $column {
                     > [class*="col-#{$breakpoint}-#{$i}"] {
+                        //$col-number: (#{$i} - 1);
+                        //$column-width-percentage: (100% - (#{$column-gutter} * (#{$i} - 1))); //pour sm : 461px
+                        //content: '#{$column-width-percentage}';
                         margin-left: 0;
                         margin-right: 0;
-                        width: calc((((100% - #{$column-gutter} * #{$i}-1) / #{$column}) * #{$i}) - (#{$column-gutter}/2) * #{$i});
+                        
+                        //width: calc(#{$column-gutter} * (#{$i} - 1));
+                        //width: calc(((#{$column-width-percentage} / #{$column}) * #{$i}) - (#{$column-gutter} * (#{$i} - 1)));
+                        //+ (#{$column-gutter} * (#{$i} - 1))
+                        //width: calc(100% - (#{$column-gutter} * (#{$i} - 1))); 
+
+                        /* 
+                            100% sm : 601px
+                            pour sm 8 cols : 461px + 140px gutters = 601px
+                            pour sm 6 cols : 345.75px + 100px gutters = 445.75px 
+                            pour sm 4 cols : 229.3px + 60px gutters = 289.30px
+                            pour sm 3 cols : 172.875px + 40px gutters = 212.875px
+                            pour sm 2 cols : 115.25px + 20px gutters = 135.25px
+                            pour sm 1 cols : 57.625px + 0px gutters = 57.625px
+                        */
+                        @if $i == 1 {
+                            width: calc(((100% - ((#{$column} - 1) * #{$column-gutter})) / (#{$column})));
+                        } @else if $i == $column {
+                            width: 100%;
+                        } @else {
+                            width: calc( ((100% - ((#{$column-gutter} * #{$i}) - #{$column-gutter})) / ((#{$column} * #{$i})) + (#{$column-gutter} * (#{$i} - 1))) );
+                            //width: calc(100% - ((#{$column-gutter} * #{$i}) - #{$column-gutter}));
+                        }
                     }
                     
                     .offset-#{$breakpoint}-#{$column} {
@@ -129,7 +154,7 @@
 
             @for $i from 1 through $column {
                 .col-#{$breakpoint}-#{$i} {
-                    background: $color;
+                    background-color: $color;
                     box-sizing: border-box;
                     margin-left: $column-gutter/2;
                     margin-right: $column-gutter/2;
