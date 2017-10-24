@@ -15,8 +15,8 @@
     }
 
     .row > * > .row {
-        margin-left: 0;
-        margin-right: 0;
+        //margin-left: 0;
+        //margin-right: 0;
 
         @include xs-only {
 
@@ -28,9 +28,9 @@
 
             @for $i from 1 through $column-count-xs {
                 > [class*="col-xs-#{$i}"] {
-                    margin-left: 0;
-                    margin-right: 0;
-                    width: calc(((100% / #{$column-count-xs}) * #{$i}) + (#{$column-gutter-xs}/2 * #{$i}/2) - #{$column-gutter-xs});
+                    margin-left: $column-gutter-xs;
+                    margin-right: $column-gutter-xs;
+                    width: calc(((100% / #{$column-count-xs}) * #{$i}) - (#{$column-gutter-xs} * 2 - #{$column-gutter-xs}/#{$i}));
                 }
                 .offset-xs-#{$i} {
                     margin-left: calc(((100% / #{$column-count-xs}) * #{$i}) + #{$column-gutter-xs} / 2);
@@ -61,6 +61,7 @@
             .col-xs-#{$i} {
                 background: aquamarine;
                 box-sizing: border-box;
+                font-size: initial;
                 margin-left: $column-gutter-xs/2;
                 margin-right: $column-gutter-xs/2;
                 width: calc(((100% / #{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
@@ -82,6 +83,11 @@
     }
 
     .row > * > .row {
+        background-color: aquamarine!important;
+        font-size: 0;
+        margin-left: -$column-gutter/2;
+        margin-right: -$column-gutter/2;
+
         @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
             (md, $min-medium, $max-medium, $column-count-md, chartreuse),
             (lg, $min-large, $max-large, $column-count-lg, aquamarine),
@@ -92,9 +98,10 @@
 
                 .full-width {
                     background: silver;
-                    margin-left: -$column-gutter;
-                    margin-right: 0;
-                    width: calc(100% + (#{$column-gutter} * 2));
+                    font-size: initial;
+                    //margin-left: -$column-gutter;
+                    //margin-right: 0;
+                    width: calc(100% + #{$column-gutter});
                 }
 
                 @for $i from 1 through $column {
@@ -120,30 +127,20 @@
                             pour sm 1 cols : 57.625px + 0px gutters = 57.625px
                         */
 
-                        display: inline-block;
+                        display: inline-flex;
+                        font-size: initial;
 
-                        @if $i == 1 {
-
-                            //margin-left: 0;
-                            //width: calc(((100% - ((#{$column} - 1) * #{$column-gutter})) / (#{$column})));
-
-                        } @else if $i == $column {
-
-                            margin-left: 0;
-                            width: 100%;
+                        @if $i == $column {
+                            margin-left: $column-gutter/2;
+                            margin-right: $column-gutter/2;
+                            width: calc(100% - $column-gutter);
 
                         } @else {
-                            margin-left: $column-gutter / 2;
-                            margin-right: $column-gutter / 2;
+                            margin-left: $column-gutter/2;
+                            margin-right: $column-gutter/2;
 
-                            &:first-child {
-                                margin-left: 0;
-                                width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}) + ((#{$column-gutter} / #{$column}) * #{$i}));
-                            }
-                            &:last-child {
-                                margin-right: 0;
-                                width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}) - ((#{$column-gutter} / #{$column}) * #{$i}));
-                            }
+                            //width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}) - ((#{$column-gutter} / #{$column}) * #{$i}));
+                            width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}));
                         }
                     }
                     
