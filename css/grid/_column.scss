@@ -117,15 +117,15 @@
                         //+ (#{$column-gutter} * (#{$i} - 1))
                         //width: calc(100% - (#{$column-gutter} * (#{$i} - 1))); 
 
-                        /* 
-                            100% sm : 601px
-                            pour sm 8 cols : 461px + 140px gutters = 601px
-                            pour sm 6 cols : 345.75px + 100px gutters = 445.75px 
-                            pour sm 4 cols : 229.3px + 60px gutters = 289.30px
-                            pour sm 3 cols : 172.875px + 40px gutters = 212.875px
-                            pour sm 2 cols : 115.25px + 20px gutters = 135.25px
-                            pour sm 1 cols : 57.625px + 0px gutters = 57.625px
-                        */
+                        //
+                        //    100% sm : 601px
+                        //    pour sm 8 cols : 461px + 140px gutters = 601px
+                        //    pour sm 6 cols : 345.75px + 100px gutters = 445.75px
+                        //    pour sm 4 cols : 229.3px + 60px gutters = 289.30px
+                        //    pour sm 3 cols : 172.875px + 40px gutters = 212.875px
+                        //    pour sm 2 cols : 115.25px + 20px gutters = 135.25px
+                        //    pour sm 1 cols : 57.625px + 0px gutters = 57.625px
+                        //
 
                         display: inline-flex;
                         font-size: initial;
@@ -133,7 +133,7 @@
                         @if $i == $column {
                             margin-left: $column-gutter/2;
                             margin-right: $column-gutter/2;
-                            width: calc(100% - $column-gutter);
+                            width: calc(100% - #{$column-gutter});
 
                         } @else {
                             margin-left: $column-gutter/2;
@@ -145,7 +145,7 @@
                     }
                     
                     .offset-#{$breakpoint}-#{$column} {
-                        margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
+                        //margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
                     }
                 }
             }
@@ -176,7 +176,7 @@
                     width: calc(((100% / #{$column}) * #{$i}) - #{$column-gutter});
                 }
                 
-                .offset-#{$breakpoint}-#{$column} {
+                .offset-#{$breakpoint}-#{$i} {
                     margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
                 }
             }
