@@ -1,8 +1,13 @@
 .grid-container {
-//.grid-container .react-view { //React-only
+    //.grid-container .react-view { //React-only
     box-sizing: border-box;
     margin-left: $column-gutter;
     margin-right: $column-gutter;
+
+    @include xs-only {
+        margin-left: $column-gutter-xs;
+        margin-right: $column-gutter-xs;
+    }
 
     > .row,
     > * > .row {
@@ -12,73 +17,10 @@
         flex-wrap: wrap;
         margin-left: -$column-gutter/2;
         margin-right: -$column-gutter/2;
-    }
-
-    .row > * > .row {
-        //margin-left: 0;
-        //margin-right: 0;
 
         @include xs-only {
-
-            .full-width {
-                background-color: darkviolet;
-                margin-left: -$column-gutter-xs;
-                width: calc(100% + (#{$column-gutter-xs} *2));
-            }
-
-            @for $i from 1 through $column-count-xs {
-                > [class*="col-xs-#{$i}"] {
-                    margin-left: $column-gutter-xs;
-                    margin-right: $column-gutter-xs;
-                    width: calc(((100% / #{$column-count-xs}) * #{$i}) - (#{$column-gutter-xs} * 2 - #{$column-gutter-xs}/#{$i}));
-                }
-                .offset-xs-#{$i} {
-                    margin-left: calc(((100% / #{$column-count-xs}) * #{$i}) + #{$column-gutter-xs} / 2);
-                }
-            }
-        }
-    }
-
-    @include xs-only {
-        margin-left: $column-gutter-xs;
-        margin-right: $column-gutter-xs;
-
-        > .row,
-        > * > .row {
             margin-left: -$column-gutter-xs/2;
             margin-right: -$column-gutter-xs/2;
-
-        }
-
-       .full-width {
-            background-color: darkviolet;
-            margin-left: -$column-gutter-xs/2;
-            margin-right: -$column-gutter-xs/2;
-            width: calc(100% + #{$column-gutter-xs});
-        }
-
-        @for $i from 1 through $column-count-xs {
-            .col-xs-#{$i} {
-                background: aquamarine;
-                box-sizing: border-box;
-                font-size: initial;
-                margin-left: $column-gutter-xs/2;
-                margin-right: $column-gutter-xs/2;
-                width: calc(((100% / #{$column-count-xs}) * #{$i}) - #{$column-gutter-xs});
-            }
-            .offset-xs-#{$i} {
-                margin-left: calc(((100% / #{$column-count-xs}) * #{$i}) + #{$column-gutter-xs} / 2);
-            }
-        }
-    }
-
-    @include sm {
-        margin-right: $column-gutter;
-
-        > .row,
-        > * > .row {
-            margin-left: -$column-gutter/2;
-            margin-right: -$column-gutter/2;
         }
     }
 
@@ -88,7 +30,13 @@
         margin-left: -$column-gutter/2;
         margin-right: -$column-gutter/2;
 
-        @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
+        @include xs-only {
+            margin-left: -$column-gutter-xs/2;
+            margin-right: -$column-gutter-xs/2;
+        }
+
+        @each $breakpoint, $min, $max, $column, $color in (xs, $min-xsmall, $max-xsmall, $column-count-xs, lightsalmon),
+            (sm, $min-small, $max-small, $column-count-sm, lightsalmon),
             (md, $min-medium, $max-medium, $column-count-md, chartreuse),
             (lg, $min-large, $max-large, $column-count-lg, aquamarine),
             (xl, $min-xlarge, $max-xlarge, $column-count-xl, purple),
@@ -99,34 +47,15 @@
                 .full-width {
                     background: silver;
                     font-size: initial;
-                    //margin-left: -$column-gutter;
-                    //margin-right: 0;
                     width: calc(100% + #{$column-gutter});
+
+                    @include xs-only {
+                        width: calc(100% + #{$column-gutter-xs});
+                    }
                 }
 
                 @for $i from 1 through $column {
                     > [class*="col-#{$breakpoint}-#{$i}"] {
-                        //$col-number: (#{$i} - 1);
-                        //$column-width-percentage: (100% - (#{$column-gutter} * (#{$i} - 1))); //pour sm : 461px
-                        //content: '#{$column-width-percentage}';
-                        //margin-left: 0;
-                        //margin-right: 0;
-                        
-                        //width: calc(#{$column-gutter} * (#{$i} - 1));
-                        //width: calc(((#{$column-width-percentage} / #{$column}) * #{$i}) - (#{$column-gutter} * (#{$i} - 1)));
-                        //+ (#{$column-gutter} * (#{$i} - 1))
-                        //width: calc(100% - (#{$column-gutter} * (#{$i} - 1))); 
-
-                        //
-                        //    100% sm : 601px
-                        //    pour sm 8 cols : 461px + 140px gutters = 601px
-                        //    pour sm 6 cols : 345.75px + 100px gutters = 445.75px
-                        //    pour sm 4 cols : 229.3px + 60px gutters = 289.30px
-                        //    pour sm 3 cols : 172.875px + 40px gutters = 212.875px
-                        //    pour sm 2 cols : 115.25px + 20px gutters = 135.25px
-                        //    pour sm 1 cols : 57.625px + 0px gutters = 57.625px
-                        //
-
                         display: inline-flex;
                         font-size: initial;
 
@@ -135,15 +64,25 @@
                             margin-right: $column-gutter/2;
                             width: calc(100% - #{$column-gutter});
 
+                            @include xs-only {
+                                margin-left: $column-gutter-xs/2;
+                                margin-right: $column-gutter-xs/2;
+                                width: calc(100% - #{$column-gutter-xs});
+                            }
+
                         } @else {
                             margin-left: $column-gutter/2;
                             margin-right: $column-gutter/2;
-
-                            //width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}) - ((#{$column-gutter} / #{$column}) * #{$i}));
                             width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter}));
+
+                            @include xs-only {
+                                margin-left: $column-gutter-xs/2;
+                                margin-right: $column-gutter-xs/2;
+                                width: calc((((100% / #{$column}) * #{$i}) - #{$column-gutter-xs}));
+                            }
                         }
                     }
-                    
+
                     .offset-#{$breakpoint}-#{$column} {
                         //margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
                     }
@@ -152,7 +91,8 @@
         }
     }
 
-    @each $breakpoint, $min, $max, $column, $color in (sm, $min-small, $max-small, $column-count-sm, lighten(lightsalmon, 5)),
+    @each $breakpoint, $min, $max, $column, $color in (xs, $min-xsmall, $max-xsmall, $column-count-xs, lighten(lightsalmon, 5)),
+        (sm, $min-small, $max-small, $column-count-sm, lighten(lightsalmon, 5)),
         (md, $min-medium, $max-medium, $column-count-md, lighten(chartreuse, 5)),
         (lg, $min-large, $max-large, $column-count-lg, lighten(aquamarine, 5)),
         (xl, $min-xlarge, $max-xlarge, $column-count-xl, lighten(purple, 5)),
@@ -164,7 +104,23 @@
                 background: silver;
                 margin-left: calc(-#{$column-gutter}/2);
                 margin-right: calc(-#{$column-gutter}/2);
-                width: calc((100% - #{$column-gutter} + (#{$column-gutter} * 2));
+                width: calc((100% - #{$column-gutter} + (#{$column-gutter} * 2)));
+
+                @include xs-only {
+                    margin-left: calc(-#{$column-gutter-xs}/2);
+                    margin-right: calc(-#{$column-gutter-xs}/2);
+                    width: calc((100% - #{$column-gutter-xs} + (#{$column-gutter-xs} * 2)));
+                }
+
+                > .row {
+                   margin-left: $column-gutter/2;
+                   margin-right: $column-gutter/2;
+
+                   @include xs-only {
+                     margin-left: $column-gutter-xs/2;
+                     margin-right: $column-gutter-xs/2;
+                    }
+                }
             }
 
             @for $i from 1 through $column {
@@ -174,10 +130,20 @@
                     margin-left: $column-gutter/2;
                     margin-right: $column-gutter/2;
                     width: calc(((100% / #{$column}) * #{$i}) - #{$column-gutter});
+
+                    @include xs-only {
+                        margin-left: $column-gutter-xs/2;
+                        margin-right: $column-gutter-xs/2;
+                        width: calc(((100% / #{$column}) * #{$i}) - #{$column-gutter-xs});
+                    }
                 }
-                
+
                 .offset-#{$breakpoint}-#{$i} {
                     margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter} / 2);
+
+                    @include xs-only {
+                        margin-left: calc(((100% / #{$column}) * #{$i}) + #{$column-gutter-xs} / 2);
+                    }
                 }
             }
         }
