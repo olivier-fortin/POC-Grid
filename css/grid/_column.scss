@@ -92,11 +92,11 @@
     }
 
     @each $breakpoint, $min, $max, $column, $color in (xs, $min-xsmall, $max-xsmall, $column-count-xs, lighten(lightsalmon, 5)),
-        (sm, $min-small, $max-small, $column-count-sm, lighten(lightsalmon, 5)),
-        (md, $min-medium, $max-medium, $column-count-md, lighten(chartreuse, 5)),
-        (lg, $min-large, $max-large, $column-count-lg, lighten(aquamarine, 5)),
-        (xl, $min-xlarge, $max-xlarge, $column-count-xl, lighten(purple, 5)),
-        (xxl, $min-xxlarge, $max-xxlarge, $column-count-xxl, lighten(lightblue, 5)) {
+        (sm, $min-small, $max-small, $column-count-sm, lighten(tomato, 5)),
+        (md, $min-medium, $max-medium, $column-count-md, lighten(palegreen, 5)),
+        (lg, $min-large, $max-large, $column-count-lg, lighten(paleturquoise, 5)),
+        (xl, $min-xlarge, $max-xlarge, $column-count-xl, lighten(lightblue, 5)),
+        (xxl, $min-xxlarge, $max-xxlarge, $column-count-xxl, lighten(mediumturquoise, 5)) {
 
         @media (min-width: #{$min}) and (max-width: #{$max}) {
 
@@ -135,6 +135,16 @@
                         margin-left: $column-gutter-xs/2;
                         margin-right: $column-gutter-xs/2;
                         width: calc(((100% / #{$column}) * #{$i}) - #{$column-gutter-xs});
+                    }
+
+                    @for $j from 1 through $column {
+                        .row > [class*="col-#{$breakpoint}-#{$j}"] {
+                            width: calc((((100% / #{$i}) * #{$j}) - #{$column-gutter}));
+
+                            @include xs-only {
+                                width: calc((((100% / #{$i}) * #{$j}) - #{$column-gutter-xs}));
+                            }
+                        }
                     }
                 }
 
