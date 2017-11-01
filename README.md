@@ -2,7 +2,6 @@
 
 ## Introduction
 
-
 Our grid system uses a split gutters and margins.
 ![Flexbox Gridy system using split gutters with margins](https://zellwk.com/images/2016/building-grid-systems/pattern-split-margin.png)
 
@@ -19,6 +18,9 @@ The column's sizes are in percentage. The gutters (margins) are set in px. (10px
 
 You need to wrap in a .col in a .row in a main parent .grid-container.
 
+
+## Example
+![You can take a look at our sample grid.](http://plnkr.co/edit/dJabuo?p=preview)
 
 ## Documentation
 - Settings can be customized using the file _variables.scss:
