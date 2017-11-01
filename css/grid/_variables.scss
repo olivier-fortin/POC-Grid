@@ -19,7 +19,7 @@
     // X-Small
     $xsmall:                    640px;
     $max-xsmall:                640px;
-    $min-xsmall:                320px;
+    $min-xsmall:                0; //320px
     $column-count-xs:           4;
     $navigation-size-xs:        240px;
 
@@ -53,7 +53,7 @@
 
     // XXLarge
     //$xxlarge:                 2340px;
-    $max-xxlarge:               3840px;
+    $max-xxlarge:               99999px; //3840px
     $min-xxlarge:               ($max-xlarge + 0.01);
     $column-count-xxl:          26;
     $navigation-size-xxl:       240px;
