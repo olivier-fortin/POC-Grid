@@ -20,7 +20,7 @@ You need to wrap in a .col in a .row in a main parent .grid-container.
 
 
 ## Example
-![You can take a look at our sample grid.](http://plnkr.co/edit/dJabuo?p=preview)
+[You can take a look at our sample grid.](http://plnkr.co/edit/dJabuo?p=preview)
 
 ## Documentation
 - Settings can be customized using the file _variables.scss:
